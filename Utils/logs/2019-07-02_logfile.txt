@@ -1,0 +1,2 @@
+2019-07-02 00:31:44.7298 ERROR Erro: '5d1accc5fed4b21cd7d534543' is not a valid 24 digit hex string.
+2019-07-02 00:35:36.9519 ERROR Erro: '5d1accc5fed4b21cd7d5e184545' is not a valid 24 digit hex string.
