@@ -1,0 +1,390 @@
+2019-07-01 13:29:59.1911 ERROR Something went wrong: System.InvalidOperationException: Unable to resolve service for type 'back_usuarios_tg.BLL.ITesteBll' while attempting to activate 'back_usuarios_tg.Controllers.TesteController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-07-01 13:31:20.8835 ERROR Something went wrong: System.InvalidOperationException: Unable to resolve service for type 'back_usuarios_tg.BLL.ITesteBll' while attempting to activate 'back_usuarios_tg.Controllers.TesteController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-07-01 13:43:12.4879 INFO Buscando todos os testes salvos no banco.
+2019-07-01 13:43:12.5426 ERROR Something went wrong: System.Exception: Exceção gerada enquanto tentava acessar os testes.
+   at back_usuarios_tg.Controllers.TesteController.Get() in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 33
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-07-01 13:46:59.9181 INFO Buscando todos os testes salvos no banco.
+2019-07-01 13:48:04.4256 ERROR Something went wrong: System.Exception: Exceção gerada enquanto tentava acessar os testes.
+   at back_usuarios_tg.Controllers.TesteController.Get() in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 33
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-07-01 13:50:09.3888 INFO Fetching all the Students from the storage
+2019-07-01 13:50:09.4240 INFO Returning 0 students.
+2019-07-01 13:56:23.2204 INFO Buscando todos os testes salvos no banco.
+2019-07-01 13:56:23.2730 ERROR Something went wrong: System.Exception: Exceção gerada enquanto tentava acessar os testes.
+   at back_usuarios_tg.Controllers.TesteController.Get() in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 33
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at back_usuarios_tg.BLL.Exceptions.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/Exceptions/ExceptionMiddleware.cs:line 25
+2019-07-01 14:09:05.7227 INFO Fetching all the Students from the storage
+2019-07-01 14:09:05.7580 INFO Returning 0 students.
+2019-07-01 14:13:58.7257 INFO Buscando todos os testes salvos no banco.
+2019-07-01 14:13:58.7786 ERROR Erro: System.Exception: Exceção gerada enquanto tentava acessar os testes.
+   at back_usuarios_tg.Controllers.TesteController.Get() in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 33
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at back_usuarios_tg.BLL.Exceptions.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/Exceptions/ExceptionMiddleware.cs:line 25
+2019-07-01 14:16:01.1039 INFO Retornando todos os testes
+2019-07-01 14:16:01.1437 INFO Retornando 0 testes.
+2019-07-01 14:26:23.7345 INFO Retornando um teste.
+2019-07-01 14:26:23.8385 ERROR Erro: System.FormatException: Element 'descricao' does not match any field or property of class back_usuarios_tg.DAL.Models.Teste.
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.Execute(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.Execute(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperation[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](IClientSessionHandle session, FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.FindFluent`2.ToCursor(CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.FirstOrDefault[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at MongoDB.Driver.IFindFluentExtensions.FirstOrDefault[TDocument,TProjection](IFindFluent`2 find, CancellationToken cancellationToken)
+   at back_usuarios_tg.DAL.DAO.TesteDAO.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/DAL/DAO/TesteDAO.cs:line 39
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 40
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 62
+2019-07-01 14:31:15.7144 INFO Retornando um teste.
+2019-07-01 14:31:53.9925 ERROR Erro: System.NullReferenceException: Object reference not set to an instance of an object.
+   at back_usuarios_tg.DAL.DAO.TesteDAO.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/DAL/DAO/TesteDAO.cs:line 41
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 40
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 62
+2019-07-01 14:37:38.7716 INFO Retornando um teste.
+2019-07-01 14:37:38.8618 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 62
+2019-07-01 14:38:02.5602 INFO Retornando um teste.
+2019-07-01 14:39:13.8594 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 62
+2019-07-01 14:42:15.3075 INFO Retornando um teste.
+2019-07-01 14:42:15.3989 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 62
+2019-07-01 14:42:15.3989 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 14:45:09.6371 INFO Retornando um teste.
+2019-07-01 14:46:03.5584 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 62
+2019-07-01 14:46:06.7589 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 14:55:21.9818 INFO Buscando todos os testes salvos no banco.
+2019-07-01 14:58:06.8694 INFO Retornando todos os testes
+2019-07-01 14:58:08.9937 INFO Retornando 2 testes.
+2019-07-01 14:59:16.7137 INFO Retornando um teste.
+2019-07-01 14:59:36.8102 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 62
+2019-07-01 14:59:37.7732 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 14:59:57.9412 ERROR Erro: System.Exception: Exceção gerada enquanto tentava acessar os testes.
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 69
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at back_usuarios_tg.BLL.Exceptions.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/Extensions/ExceptionMiddleware.cs:line 25
+2019-07-01 15:02:30.6202 INFO Retornando um teste.
+2019-07-01 15:03:03.1187 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 63
+2019-07-01 15:03:04.9275 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:03:31.5834 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Exceção gerada enquanto tentava acessar os testes.
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 70
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at back_usuarios_tg.BLL.Exceptions.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/Extensions/ExceptionMiddleware.cs:line 25
+2019-07-01 15:04:22.2862 INFO Retornando um teste.
+2019-07-01 15:04:45.3971 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 63
+2019-07-01 15:04:47.2604 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:05:19.1105 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 70
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at back_usuarios_tg.BLL.Exceptions.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/Extensions/ExceptionMiddleware.cs:line 25
+2019-07-01 15:08:20.4816 INFO Retornando um teste.
+2019-07-01 15:08:20.5717 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 63
+2019-07-01 15:08:20.5720 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:08:20.5768 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 70
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at back_usuarios_tg.BLL.Exceptions.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/Extensions/ExceptionMiddleware.cs:line 25
+2019-07-01 15:08:53.6892 INFO Retornando um teste.
+2019-07-01 15:09:10.1840 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 63
+2019-07-01 15:09:11.0433 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:09:20.7431 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 70
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at back_usuarios_tg.BLL.Exceptions.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/Extensions/ExceptionMiddleware.cs:line 25
+2019-07-01 15:11:38.0279 INFO Retornando um teste.
+2019-07-01 15:11:53.7155 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 63
+2019-07-01 15:11:54.9858 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:12:54.7445 INFO Retornando um teste.
+2019-07-01 15:12:54.8353 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 63
+2019-07-01 15:12:54.8359 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:15:15.3546 INFO Retornando um teste.
+2019-07-01 15:15:15.4460 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 64
+2019-07-01 15:15:15.4460 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:15:34.4391 INFO Retornando um teste.
+2019-07-01 15:15:38.3001 INFO Retornando um teste.
+2019-07-01 15:15:38.3001 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 64
+2019-07-01 15:15:38.3001 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:30:21.5784 INFO Retornando um teste.
+2019-07-01 15:30:34.4699 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 64
+2019-07-01 15:30:35.5322 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:31:50.4650 INFO Retornando um teste.
+2019-07-01 15:31:50.5554 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 64
+2019-07-01 15:31:50.5560 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:31:50.5599 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 74
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at back_usuarios_tg.BLL.Exceptions.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/Extensions/ExceptionMiddleware.cs:line 26
+2019-07-01 15:36:19.0777 INFO Retornando um teste.
+2019-07-01 15:36:19.1686 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 65
+2019-07-01 15:36:19.1686 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:37:09.2668 INFO Retornando um teste.
+2019-07-01 15:37:26.0518 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 65
+2019-07-01 15:37:28.1558 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:42:18.8603 INFO Retornando um teste.
+2019-07-01 15:42:37.6622 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 65
+2019-07-01 15:42:38.5516 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:44:46.2787 INFO Retornando um teste.
+2019-07-01 15:44:46.3707 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 65
+2019-07-01 15:44:46.3707 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:49:42.6560 INFO Retornando um teste.
+2019-07-01 15:49:42.7510 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 64
+2019-07-01 15:49:42.7510 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:49:42.7557 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed, Tipo: TesteBll
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 74
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at back_usuarios_tg.BLL.Exceptions.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/Extensions/ExceptionMiddleware.cs:line 25
+2019-07-01 15:51:15.3147 INFO Retornando um teste.
+2019-07-01 15:51:27.6925 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed
+   at back_usuarios_tg.BLL.TesteBll.GetTeste(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/BLL/TesteBLL.cs:line 62
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 64
+2019-07-01 15:51:28.6821 INFO Nenhum teste encontrado com o id: 5d1a42218cb1915bc67688ed
+2019-07-01 15:51:45.0991 ERROR Erro: back_usuarios_tg.BLL.Exceptions.NotFoundException: Objeto não encontrado! Id: 5d1a42218cb1915bc67688ed
+   at back_usuarios_tg.Controllers.TesteController.Get(String id) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/TesteController.cs:line 74
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at back_usuarios_tg.BLL.Exceptions.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in /home/cpd/PREFEITURA/EXEMPLOS/back-sistema-tg/Controllers/Extensions/ExceptionMiddleware.cs:line 25
