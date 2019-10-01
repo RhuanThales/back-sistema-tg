@@ -96,9 +96,9 @@ namespace back_sistema_tg
                 options.SwaggerDoc("v1",
                     new Info
                     {
-                        Title = "Sistema de Usuários TG 04-013",
+                        Title = "Sistema de Gerênciamento do TG 04-013",
                         Version = "v1",
-                        Description = "Sistema de Usuários TG 04-013",
+                        Description = "Sistema de Gerênciamento do TG 04-013",
                         Contact = new Contact
                         {
                             Name = "TG 04-013"
@@ -147,7 +147,7 @@ namespace back_sistema_tg
             app.UseSwaggerUI(c =>
             {
                 c.RoutePrefix = "swagger";
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Sistema de Usuários TG 04-013");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Sistema de Gerênciamento do TG 04-013");
             });
 
             // Middleware
