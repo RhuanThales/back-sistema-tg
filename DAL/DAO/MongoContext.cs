@@ -15,5 +15,7 @@ namespace back_sistema_tg.DAL.DAO
             _db = client.GetDatabase(options.Value.Database);
         }
         public IMongoCollection<Usuario> CollectionUsuario => _db.GetCollection<Usuario>("Usuario");
+
+        public IMongoCollection<Atirador> CollectionAtirador => _db.GetCollection<Atirador>("Atirador");
     }
 }
