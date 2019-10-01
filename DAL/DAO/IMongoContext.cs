@@ -9,6 +9,8 @@ namespace back_sistema_tg.DAL.DAO
 
         IMongoCollection<Atirador> CollectionAtirador { get; }
 
-        IMongoCollection<Oficial> GetCollectionOficial();
+       //IMongoCollection<Oficial> CollectionOficial  { get; }
+
+       //IMongoCollection<Pelotao> CollectionPelotao { get; }
     }
 }
