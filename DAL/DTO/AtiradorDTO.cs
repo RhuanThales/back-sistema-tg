@@ -1,7 +1,7 @@
 using System;
 using back_sistema_tg.DAL.Models;
 
-namespace back_usuarios_tg.DAL.DTO
+namespace back_sistema_tg.DAL.DTO
 {
     public class AtiradorDTO
     {
