@@ -20,6 +20,5 @@ namespace back_sistema_tg.DAL.Models
         
         [BsonElement("PerfilSuper")]
         public bool PerfilSuper { get; set; }
- 
     }
 }

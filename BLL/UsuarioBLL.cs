@@ -66,6 +66,7 @@ namespace back_sistema_tg.BLL
             var obj = _usuarioDAO.ObterPorId(id);
 
             bool hasAny = obj!=null;
+            
             if (!hasAny)
             {
                 throw new NotFoundException("Id não encontrado.");
