@@ -33,12 +33,7 @@ namespace back_sistema_tg.Controllers
 
         [HttpPost("Inserir")]
         public IActionResult Inserir([FromBody]UsuarioDTO usuario)
-        {
-            /* if (!ModelState.IsValid)
-            {
-                return BadRequest(new ApiBadRequestResponse(ModelState));
-            } */
-            
+        {            
             _usuarioBll.Inserir(_mapper.Map<Usuario>(usuario));
 
             return Ok(new ApiResponse(200, "Inserido com sucesso."));
@@ -47,11 +42,6 @@ namespace back_sistema_tg.Controllers
         [HttpGet("ObterTodos")]
         public ActionResult<List<UsuarioDTO>> ObterTodos()
         {
-            /* if (!ModelState.IsValid)
-            {
-                return BadRequest(new ApiBadRequestResponse(ModelState));
-            } */
-
             var model = _usuarioBll.ObterTodos();
 
             if (model == null)
@@ -72,11 +62,6 @@ namespace back_sistema_tg.Controllers
         [HttpGet("ObterPorId/{id}")]
         public ActionResult<UsuarioDTO> ObterPorId(string id)
         {
-            /* if (!ModelState.IsValid)
-            {
-                return BadRequest(new ApiBadRequestResponse(ModelState));
-            } */
-
             var model = _usuarioBll.ObterPorId(id);
 
             if (model == null)
@@ -90,11 +75,6 @@ namespace back_sistema_tg.Controllers
         [HttpGet("ObterPorLogin/{login}")]
         public ActionResult<UsuarioDTO> ObterPorLogin(string login)
         {
-            /* if (!ModelState.IsValid)
-            {
-                return BadRequest(new ApiBadRequestResponse(ModelState));
-            } */
-
             var model = _usuarioBll.ObterPorLogin(login);
 
             if (model == null)
