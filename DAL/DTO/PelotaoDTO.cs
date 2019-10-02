@@ -1,4 +1,4 @@
-namespace back_usuarios_tg.DAL.Models
+namespace back_sistema_tg.DAL.Models
 {
     public class PelotaoDTO
     {

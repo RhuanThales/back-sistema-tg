@@ -1,4 +1,4 @@
-namespace back_usuarios_tg.DAL.DTO
+namespace back_sistema_tg.DAL.DTO
 {
     public class OficialDTO
     {
