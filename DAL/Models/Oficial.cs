@@ -1,13 +1,13 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace back_usuarios_tg.DAL.Models
+namespace back_sistema_tg.DAL.Models
 {
     public class Oficial
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        public string IdOficial { get; set; }
         
         [BsonElement("Nome")]
         public string Nome { get; set; }

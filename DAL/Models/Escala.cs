@@ -7,7 +7,7 @@ namespace back_sistema_tg.DAL.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        public string IdEscala { get; set; }
         
         [BsonElement("InstrutorDia")]
         public string InstrutorDia { get; set; }

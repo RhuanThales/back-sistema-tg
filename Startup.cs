@@ -41,12 +41,10 @@ namespace back_sistema_tg
                 cfg.AddProfile(new AutoMapperProfileConfiguration());
             });
 
-
             Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
-
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -61,7 +59,6 @@ namespace back_sistema_tg
 
             services.AddSingleton<IMongoClient, MongoClient>(
                 _ => new MongoClient(Configuration.GetSection("MongoDb:ConnectionString").Value));
-
 
             services.AddMvc(options => 
             {
@@ -119,7 +116,6 @@ namespace back_sistema_tg
             services.AddScoped<IUsuarioBll, UsuarioBll>();
 
             services.AddScoped<SeedingService>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -130,7 +126,6 @@ namespace back_sistema_tg
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials());
-
 
             if (env.IsDevelopment())
             {
