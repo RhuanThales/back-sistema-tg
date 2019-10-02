@@ -17,7 +17,7 @@ namespace back_sistema_tg
             // Mapeando a classe Atirador
             CreateMap<AtiradorDTO, Atirador>().
                 AfterMap((dto, model) => model.IdAtirador = dto.IdAtirador);
-            CreateMap<Atirador, UsuarioDTO>()
+            CreateMap<Atirador, AtiradorDTO>()
                 .AfterMap((model, dto) => dto.IdAtirador = model.IdAtirador);
 
                 // Mapeando a classe Oficial
@@ -37,8 +37,6 @@ namespace back_sistema_tg
                 AfterMap((dto, model) => model.IdEscala = dto.IdEscala);
             CreateMap<Escala, EscalaDTO>()
                 .AfterMap((model, dto) => dto.IdEscala = model.IdEscala);
-
-               
         }
     }
 }
