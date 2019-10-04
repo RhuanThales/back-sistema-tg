@@ -115,6 +115,9 @@ namespace back_sistema_tg
             services.AddScoped<IUsuarioDAO, UsuarioDAO>();
             services.AddScoped<IUsuarioBll, UsuarioBll>();
 
+            services.AddScoped<IAtiradorDAO, AtiradorDAO>();
+            services.AddScoped<IAtiradorBll, AtiradorBll>();
+
             services.AddScoped<SeedingService>();
         }
 
