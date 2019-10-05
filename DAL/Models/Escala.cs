@@ -1,5 +1,6 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System;
 
 namespace back_sistema_tg.DAL.Models
 {
@@ -13,15 +14,18 @@ namespace back_sistema_tg.DAL.Models
         public string InstrutorDia { get; set; }
 
         [BsonElement("PermanenciaManha")]
-        public Atirador PermanenciaManha { get; set; }
+        public string [] PermanenciaManha { get; set; }
 
         [BsonElement("PermanenciaTarde")]
-        public Atirador PermanenciaTarde { get; set; }
+        public string [] PermanenciaTarde { get; set; }
 
         [BsonElement("ComandanteGuarda")]
         public string ComandanteGuarda { get; set; }
 
         [BsonElement("Guardas")]
-        public Atirador Guardas { get; set; }
+        public string [] Guardas { get; set; }
+
+         [BsonElement("Dia")]
+        public DateTime Dia { get; set; }
     }
 }
