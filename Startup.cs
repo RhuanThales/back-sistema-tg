@@ -121,6 +121,9 @@ namespace back_sistema_tg
             services.AddScoped<IOficialDAO, OficialDAO>();
             services.AddScoped<IOficialBll, OficialBll>();
 
+            services.AddScoped<IPelotaoDAO, PelotaoDAO>();
+            services.AddScoped<IPelotaoBll, PelotaoBll>();
+
             services.AddScoped<SeedingService>();
         }
 

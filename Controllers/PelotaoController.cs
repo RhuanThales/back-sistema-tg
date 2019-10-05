@@ -15,74 +15,74 @@ using AutoMapper;
 
 namespace back_sistema_tg.Controllers
 {
-    [Route("api/[controller]")]
+     [Route("api/[controller]")]
     [ApiController]
 
-    public class OficialController:ControllerBase
+    public class PelotaoController:ControllerBase 
     {
-        private readonly IOficialBll _oficialBll;
+        private readonly IPelotaoBll _pelotaoBll;
         private ILoggerManager _logger;
         private IMapper _mapper;
         
-        public OficialController(IOficialBll oficialBll, ILoggerManager logger, IMapper mapper)
+        public PelotaoController(IPelotaoBll pelotaoBll, ILoggerManager logger, IMapper mapper)
         {
-            _oficialBll = oficialBll;
+            _pelotaoBll = pelotaoBll;
             _logger = logger;
             _mapper = mapper;
         }
 
         [HttpPost("Inserir")]
-        public IActionResult Inserir([FromBody]OficialDTO oficial)
+        public IActionResult Inserir([FromBody]PelotaoDTO pelotao)
         {            
-            _oficialBll.Inserir(_mapper.Map<Oficial>(oficial));
+            _pelotaoBll.Inserir(_mapper.Map<Pelotao>(pelotao));
 
-            return Ok(new ApiResponse(200, "Oficial inserido com sucesso."));
+            return Ok(new ApiResponse(200, "Pelotao inserido com sucesso."));
         }
         
         [HttpGet("ObterTodos")]
         public ActionResult<List<OficialDTO>> ObterTodos()
         {
-            var model = _oficialBll.ObterTodos();
+            var model = _pelotaoBll.ObterTodos();
 
             if (model == null)
             {
-                return NotFound(new ApiResponse(404, "Oficial não encontrado."));
+                return NotFound(new ApiResponse(404, "Pelotao não encontrado."));
             }
 
-            List<OficialDTO> listaOficial = new List<OficialDTO>();
+            List<PelotaoDTO> listaPelotao = new List<PelotaoDTO>();
 
             foreach (var item in model)
             {
-                listaOficial.Add(_mapper.Map<OficialDTO>(item));
+                listaPelotao.Add(_mapper.Map<PelotaoDTO>(item));
             }
 
-            return Ok(new ApiOkResponse(listaOficial));
+            return Ok(new ApiOkResponse(listaPelotao));
         }
 
-        [HttpGet("ObterPorId/{IdOficial}")]
-        public ActionResult<OficialDTO> ObterPorId(string IdOficial)
+        [HttpGet("ObterPorId/{IdPelotao}")]
+        public ActionResult<PelotaoDTO> ObterPorId(string IdPelotao)
         {
-            var model = _oficialBll.ObterPorId(IdOficial);
+            var model = _pelotaoBll.ObterPorId(IdPelotao);
 
             if (model == null)
             {
-                return NotFound(new ApiResponse(404, $"O Oficial com o id->{IdOficial} não foi encontrado."));
+                return NotFound(new ApiResponse(404, $"O Pelotao com o id->{IdPelotao} não foi encontrado."));
             }            
 
-            return Ok(new ApiOkResponse(_mapper.Map<OficialDTO>(model)));
+            return Ok(new ApiOkResponse(_mapper.Map<PelotaoDTO>(model)));
         }
 
         [HttpPut("Atualizar/{id}")]
-        public IActionResult Atualizar(string id, OficialDTO oficial)
+        public IActionResult Atualizar(string id, PelotaoDTO pelotao)
         {
             /* if (!ModelState.IsValid)
             {
                 return BadRequest(new ApiBadRequestResponse(ModelState));
             } */
 
-            _oficialBll.Atualizar(id, _mapper.Map<Oficial>(oficial));
+            _pelotaoBll.Atualizar(id, _mapper.Map<Pelotao>(pelotao));
 
-            return Ok(new ApiResponse(200, $"Oficial {id} atualizado com sucesso."));
+            return Ok(new ApiResponse(200, $"Pelotao {id} atualizado com sucesso."));
         } 
         
 
@@ -94,13 +94,13 @@ namespace back_sistema_tg.Controllers
                 return BadRequest(new ApiBadRequestResponse(ModelState));
             } */
 
-            _oficialBll.Excluir(id);
+            _pelotaoBll.Excluir(id);
 
-            return Ok(new ApiResponse(200, $"Oficial {id} removido com sucesso."));
+            return Ok(new ApiResponse(200, $"Pelotao {id} removido com sucesso."));
         }
         
 
 
     }
-        
+
 }
