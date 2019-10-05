@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace back_sistema_tg.BLL
 {
-    public class FrequenciaBll : IFrequenciabll
+    public class FrequenciaBll : IFrequenciaBll
     {
-                public readonly IFrequenciaDAO _frequenciaDAO;
+        public readonly IFrequenciaDAO _frequenciaDAO;
 
         public FrequenciaBll(IFrequenciaDAO frequenciaDAO)
         {

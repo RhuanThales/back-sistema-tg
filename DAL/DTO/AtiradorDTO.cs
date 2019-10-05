@@ -6,7 +6,7 @@ namespace back_sistema_tg.DAL.DTO
     public class AtiradorDTO
     {
         public string IdAtirador { get; set; }
-        public string RA { get; set; }
+        public string CR { get; set; }
         public string NomeAtirador { get; set; }
         public int NumeroPelotao { get; set; }
         public string NomeGuerra { get; set; }
@@ -27,6 +27,6 @@ namespace back_sistema_tg.DAL.DTO
         public string CPF { get; set; }
         public TituloEleitor TituloEleitor { get; set; }
         public string Funcao { get; set; }
-        public string Faltas { get; set; }
+        public int TotalPontos { get; set; }
     }
 }

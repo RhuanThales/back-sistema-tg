@@ -20,7 +20,7 @@ namespace back_sistema_tg.DAL.DAO
         public void Inserir(Atirador atirador)
         {
             Atirador novoAtirador = new Atirador{
-                RA = atirador.RA,
+                CR = atirador.CR,
                 NomeAtirador = atirador.NomeAtirador,
                 NumeroPelotao = atirador.NumeroPelotao,
                 NomeGuerra = atirador.NomeGuerra,
@@ -41,7 +41,7 @@ namespace back_sistema_tg.DAL.DAO
                 CPF = atirador.CPF,
                 TituloEleitor = atirador.TituloEleitor,
                 Funcao = atirador.Funcao,
-                Faltas = atirador.Faltas
+                TotalPontos = atirador.TotalPontos
             };
 
             _context.CollectionAtirador.InsertOne(novoAtirador);
@@ -65,7 +65,7 @@ namespace back_sistema_tg.DAL.DAO
         {
             Atirador atirador = new Atirador{
                 IdAtirador = id,
-                RA = novoAtirador.RA,
+                CR = novoAtirador.CR,
                 NomeAtirador = novoAtirador.NomeAtirador,
                 NumeroPelotao = novoAtirador.NumeroPelotao,
                 NomeGuerra = novoAtirador.NomeGuerra,
@@ -86,7 +86,7 @@ namespace back_sistema_tg.DAL.DAO
                 CPF = novoAtirador.CPF,
                 TituloEleitor = novoAtirador.TituloEleitor,
                 Funcao = novoAtirador.Funcao,
-                Faltas = novoAtirador.Faltas
+                TotalPontos = novoAtirador.TotalPontos
             };
 
             _context.CollectionAtirador.ReplaceOne(u => u.IdAtirador == id, atirador);

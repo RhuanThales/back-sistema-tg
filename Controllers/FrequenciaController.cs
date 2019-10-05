@@ -20,11 +20,11 @@ namespace back_sistema_tg.Controllers
     [ApiController]
     public class FrequenciaController:ControllerBase
     {
-        private readonly IFrequenciabll _frequenciaBll;
+        private readonly IFrequenciaBll _frequenciaBll;
         private ILoggerManager _logger;
         private IMapper _mapper;
         
-        public FrequenciaController(IFrequenciabll frequenciaBll, ILoggerManager logger, IMapper mapper)
+        public FrequenciaController(IFrequenciaBll frequenciaBll, ILoggerManager logger, IMapper mapper)
         {
             _frequenciaBll = frequenciaBll;
             _logger = logger;
@@ -75,11 +75,6 @@ namespace back_sistema_tg.Controllers
         [HttpPut("Atualizar/{id}")]
         public IActionResult Atualizar(string id, FrequenciaDTO frequencia)
         {
-            /* if (!ModelState.IsValid)
-            {
-                return BadRequest(new ApiBadRequestResponse(ModelState));
-            } */
-
             _frequenciaBll.Atualizar(id, _mapper.Map<Frequencia>(frequencia));
 
             return Ok(new ApiResponse(200, $"Frequencia {id} atualizada com sucesso."));
@@ -89,19 +84,9 @@ namespace back_sistema_tg.Controllers
         [HttpDelete("Excluir/{id}")]
         public IActionResult Excluir(string id)
         {
-            /* if (!ModelState.IsValid)
-            {
-                return BadRequest(new ApiBadRequestResponse(ModelState));
-            } */
-
             _frequenciaBll.Excluir(id);
 
             return Ok(new ApiResponse(200, $"Frequencia {id} removida com sucesso."));
         }
-        
-
-
     }
-        
-
 }

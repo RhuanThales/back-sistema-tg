@@ -10,8 +10,8 @@ namespace back_sistema_tg.DAL.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string IdAtirador { get; set; }
 
-        [BsonElement("RA")]
-        public string RA { get; set; }
+        [BsonElement("CR")]
+        public string CR { get; set; }
 
         [BsonElement("NomeAtirador")]
         public string NomeAtirador { get; set; }
@@ -73,7 +73,7 @@ namespace back_sistema_tg.DAL.Models
         [BsonElement("Funcao")]
         public string Funcao { get; set; }
 
-        [BsonElement("Faltas")]
-        public string Faltas { get; set; }
+        [BsonElement("TotalPontos")]
+        public int TotalPontos { get; set; }
     }
 }

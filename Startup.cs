@@ -127,6 +127,9 @@ namespace back_sistema_tg
             services.AddScoped<IEscalaDAO, EscalaDAO>();
             services.AddScoped<IEscalaBll, EscalaBll>();
 
+            services.AddScoped<IFrequenciaDAO, FrequenciaDAO>();
+            services.AddScoped<IFrequenciaBll, FrequenciaBll>();
+
             services.AddScoped<SeedingService>();
         }
 

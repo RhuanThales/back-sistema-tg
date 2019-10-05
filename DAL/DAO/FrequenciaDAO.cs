@@ -8,7 +8,7 @@ namespace back_sistema_tg.DAL.DAO
 {
     public class FrequenciaDAO:IFrequenciaDAO
     {
-              private readonly IMongoContext _context;
+        private readonly IMongoContext _context;
 
         // Método Construtor da classe
         public FrequenciaDAO(IMongoContext context)

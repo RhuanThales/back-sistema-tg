@@ -6,7 +6,7 @@ namespace back_sistema_tg.DAL.Models
 {
     public class Frequencia
     {
-         [BsonId]
+        [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string IdFrequencia { get; set; }
         
@@ -25,7 +25,7 @@ namespace back_sistema_tg.DAL.Models
         [BsonElement("PesoHoras")]
         public int PesoHoras { get; set; }
 
-         [BsonElement("Presenca")]
+        [BsonElement("Presenca")]
         public bool Presenca { get; set; }
     }
 }

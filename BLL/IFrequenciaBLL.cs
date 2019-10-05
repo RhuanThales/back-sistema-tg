@@ -4,7 +4,7 @@ using back_sistema_tg.DAL.Models;
 
 namespace back_sistema_tg.BLL
 {
-    public interface IFrequenciabll
+    public interface IFrequenciaBll
     {
         // Create
         void Inserir(Frequencia frequencia);
