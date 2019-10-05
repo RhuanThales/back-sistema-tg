@@ -19,5 +19,7 @@ namespace back_sistema_tg.DAL.DAO
         public IMongoCollection<Oficial> CollectionOficial => _db.GetCollection<Oficial>("Oficial");
         public IMongoCollection<Pelotao> CollectionPelotao => _db.GetCollection<Pelotao>("Pelotao");
         public IMongoCollection<Escala> CollectionEscala => _db.GetCollection<Escala>("Escala");
+
+        public IMongoCollection<Frequencia> CollectionFrequencia => _db.GetCollection<Frequencia>("Frequencia");
     }
 }
