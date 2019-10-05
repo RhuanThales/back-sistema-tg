@@ -10,6 +10,9 @@ namespace back_sistema_tg.DAL.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string IdAtirador { get; set; }
 
+        [BsonElement("RA")]
+        public string RA { get; set; }
+
         [BsonElement("NomeAtirador")]
         public string NomeAtirador { get; set; }
         
@@ -20,7 +23,7 @@ namespace back_sistema_tg.DAL.Models
         public string NomeGuerra { get; set; }
 
         [BsonElement("NumeroAtirador")]
-        public string NumeroAtirador { get; set; }
+        public int NumeroAtirador { get; set; }
 
         [BsonElement("Religiao")]
         public string Religiao { get; set; }
@@ -46,11 +49,7 @@ namespace back_sistema_tg.DAL.Models
         [BsonElement("NomeMae")]
         public string NomeMae { get; set; }
 
-        // [BsonElement("CEP")]
-        // public string CEP { get; set; }
-
         [BsonElement("Endereco")]
-        // public string Endereco { get; set; }
         public EnderecoCompleto Endereco { get; set; }
 
         [BsonElement("Telefones")]
@@ -64,18 +63,17 @@ namespace back_sistema_tg.DAL.Models
  
         [BsonElement("RG")]
         public RegistroGeral RG { get; set; }
-        // public string RG { get; set; }
-
-        // [BsonElement("OrgaoEmissor")]
-        // public string OrgaoEmissor { get; set; }
 
         [BsonElement("CPF")]
         public string CPF { get; set; }
 
         [BsonElement("TituloEleitor")]
-        public string TituloEleitor { get; set; }
+        public TituloEleitor TituloEleitor { get; set; }
 
         [BsonElement("Funcao")]
         public string Funcao { get; set; }
+
+        [BsonElement("Faltas")]
+        public string Faltas { get; set; }
     }
 }

@@ -15,7 +15,6 @@ using AutoMapper;
 
 namespace back_sistema_tg.Controllers
 {
-    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("api/[controller]")]
     [ApiController]
     public class AtiradorController:ControllerBase
@@ -75,11 +74,6 @@ namespace back_sistema_tg.Controllers
         [HttpPut("Atualizar/{id}")]
         public IActionResult Atualizar(string id, AtiradorDTO atirador)
         {
-            /* if (!ModelState.IsValid)
-            {
-                return BadRequest(new ApiBadRequestResponse(ModelState));
-            } */
-
             _atiradorBll.Atualizar(id, _mapper.Map<Atirador>(atirador));
 
             return Ok(new ApiResponse(200, $"Atirador {id} atualizado com sucesso."));
@@ -89,17 +83,9 @@ namespace back_sistema_tg.Controllers
         [HttpDelete("Excluir/{id}")]
         public IActionResult Excluir(string id)
         {
-            /* if (!ModelState.IsValid)
-            {
-                return BadRequest(new ApiBadRequestResponse(ModelState));
-            } */
-
             _atiradorBll.Excluir(id);
 
             return Ok(new ApiResponse(200, $"Atirador {id} removido com sucesso."));
         }
-        
-
-
     }
 }
