@@ -15,6 +15,9 @@ namespace back_sistema_tg.DAL.Models
         [BsonElement("NumeroPelotao")]
         public int NumeroPelotao { get; set; }
 
+        [BsonElement("Patente")]
+        public string Patente { get; set; }
+        
         [BsonElement("FuncaoOficial")]
         public string FuncaoOficial { get; set; }
 
