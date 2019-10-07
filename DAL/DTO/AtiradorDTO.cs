@@ -20,7 +20,7 @@ namespace back_sistema_tg.DAL.DTO
         public string NomePai { get; set; }
         public string NomeMae { get; set; }
         public EnderecoCompleto Endereco { get; set; }
-        public string [] Telefones { get; set; }
+        public string Telefone { get; set; }
         public string TelefonePai { get; set; }
         public string TelefoneMae { get; set; }
         public RegistroGeral RG { get; set; }

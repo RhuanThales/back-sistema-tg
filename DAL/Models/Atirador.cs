@@ -52,8 +52,8 @@ namespace back_sistema_tg.DAL.Models
         [BsonElement("Endereco")]
         public EnderecoCompleto Endereco { get; set; }
 
-        [BsonElement("Telefones")]
-        public string [] Telefones { get; set; }
+        [BsonElement("Telefone")]
+        public string Telefone { get; set; }
 
         [BsonElement("TelefonePai")]
         public string TelefonePai { get; set; }
