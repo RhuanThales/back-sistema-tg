@@ -19,14 +19,21 @@ namespace back_sistema_tg.DAL.DTO
         public string NaturalidadeCR { get; set; }
         public string NomePai { get; set; }
         public string NomeMae { get; set; }
-        public EnderecoCompleto Endereco { get; set; }
         public string Telefone { get; set; }
         public string TelefonePai { get; set; }
         public string TelefoneMae { get; set; }
-        public RegistroGeral RG { get; set; }
         public string CPF { get; set; }
-        public TituloEleitor TituloEleitor { get; set; }
         public string Funcao { get; set; }
+        public string Logradouro { get; set; }   
+        public string Bairro { get; set; }
+        public int NumeroEndereco { get; set; }
+        public string CEP { get; set; }
+        public string Cidade { get; set; }
+        public string Estado { get; set; }
+        public string OrgaoEmissor { get; set; }
+        public string NumeroRG { get; set; }
+        public string Zona { get; set; }
+        public string NumeroTitulo { get; set; }
         public int TotalPontos { get; set; }
     }
 }

@@ -49,9 +49,6 @@ namespace back_sistema_tg.DAL.Models
         [BsonElement("NomeMae")]
         public string NomeMae { get; set; }
 
-        [BsonElement("Endereco")]
-        public EnderecoCompleto Endereco { get; set; }
-
         [BsonElement("Telefone")]
         public string Telefone { get; set; }
 
@@ -60,20 +57,44 @@ namespace back_sistema_tg.DAL.Models
 
         [BsonElement("TelefoneMae")]
         public string TelefoneMae { get; set; }
- 
-        [BsonElement("RG")]
-        public RegistroGeral RG { get; set; }
 
         [BsonElement("CPF")]
         public string CPF { get; set; }
 
-        [BsonElement("TituloEleitor")]
-        public TituloEleitor TituloEleitor { get; set; }
-
         [BsonElement("Funcao")]
         public string Funcao { get; set; }
 
+        [BsonElement("Logradouro")]
+        public string Logradouro { get; set; }
+        
+        [BsonElement("Bairro")]
+        public string Bairro { get; set; }
+
+        [BsonElement("NumeroEndereco")]
+        public int NumeroEndereco { get; set; }
+
+        [BsonElement("CEP")]
+        public string CEP { get; set; }
+
+        [BsonElement("Cidade")]
+        public string Cidade { get; set; }
+
+        [BsonElement("Estado")]
+        public string Estado { get; set; }
+
+        [BsonElement("OrgaoEmissor")]
+        public string OrgaoEmissor { get; set; }
+        
+        [BsonElement("NumeroRg")]
+        public string NumeroRG { get; set; }
+
+        [BsonElement("Zona")]  
+        public string Zona { get; set; }
+        
+        [BsonElement("NumeroTitulo")] 
+        public string NumeroTitulo { get; set; }
+
         [BsonElement("TotalPontos")]
-        public int TotalPontos { get; set; }
+        public int TotalPontos { get; set; }        
     }
 }
