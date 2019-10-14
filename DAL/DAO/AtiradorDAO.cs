@@ -53,6 +53,12 @@ namespace back_sistema_tg.DAL.DAO
 
             return colecaoAtirador;
         }
+         public List<Atirador> ObterPorPelotao(int NumeroPelotao)
+        {
+            var pelotaoAtirador = _context.CollectionAtirador.Find<Atirador>(num => num.NumeroPelotao == NumeroPelotao).ToList();
+
+            return pelotaoAtirador;
+        }
 
         public Atirador ObterPorId(string id)
         {

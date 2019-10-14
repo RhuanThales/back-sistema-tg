@@ -71,6 +71,26 @@ namespace back_sistema_tg.Controllers
             return Ok(new ApiOkResponse(_mapper.Map<AtiradorDTO>(model)));
         }
 
+        [HttpGet("ObterPelotao/{NumeroPelotao}")]
+        public ActionResult<List<AtiradorDTO>> ObterPorPelotao(int NumeroPelotao)
+        {
+            var teste = _atiradorBll.ObterPorPelotao(NumeroPelotao);
+
+            if (teste == null)
+            {
+                return NotFound(new ApiResponse(404, $"O Atirador com o numero de Pelotao->{NumeroPelotao} não foi encontrado."));
+            }            
+
+            List<AtiradorDTO> listaAtirador = new List<AtiradorDTO>();
+
+            foreach (var item in teste)
+            {
+                listaAtirador.Add(_mapper.Map<AtiradorDTO>(item));
+            }
+
+            return Ok(new ApiOkResponse(listaAtirador));
+        }
+
         [HttpPut("Atualizar/{id}")]
         public IActionResult Atualizar(string id, AtiradorDTO atirador)
         {

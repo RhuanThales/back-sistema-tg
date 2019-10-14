@@ -12,6 +12,8 @@ namespace back_sistema_tg.DAL.DAO
         void Inserir(Atirador atirador);
         // Read
         List<Atirador> ObterTodos();
+        //Obter os Atiradores por Pelotão
+        List<Atirador> ObterPorPelotao(int NumeroPelotao);
         Atirador ObterPorId(string id);
         // Update
         void Atualizar(string id, Atirador novoAtirador);

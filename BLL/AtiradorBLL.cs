@@ -35,6 +35,20 @@ namespace back_sistema_tg.BLL
             return atirador;
         }
 
+        public List<Atirador> ObterPorPelotao(int NumeroPelotao){
+            try
+            {
+                var pelotao = _atiradorDAO.ObterPorPelotao(NumeroPelotao);
+                return pelotao;
+            }
+            catch (System.Exception ex)
+            {
+                
+                throw new System.Exception(ex.Message);
+            }
+            
+        }
+
         public void Atualizar(string IdAtirador, Atirador novoAtirador)
         {
             bool hasAny = (_atiradorDAO.ObterPorId(IdAtirador))!=null;

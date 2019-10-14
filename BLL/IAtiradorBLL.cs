@@ -11,6 +11,7 @@ namespace back_sistema_tg.BLL
         // Read
         List<Atirador> ObterTodos();
         Atirador ObterPorId(string IdAtirador);
+        List<Atirador> ObterPorPelotao(int NumeroPelotao);
         // Update
         void Atualizar(string id, Atirador novoAtirador);
         // Delete
