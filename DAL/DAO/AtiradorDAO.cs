@@ -38,15 +38,9 @@ namespace back_sistema_tg.DAL.DAO
                 TelefoneMae = atirador.TelefoneMae,
                 CPF = atirador.CPF,
                 Funcao = atirador.Funcao,
-                Logradouro = atirador.Logradouro,
-                Bairro = atirador.Bairro,
-                NumeroEndereco = atirador.NumeroEndereco,
-                CEP = atirador.CEP,
-                Cidade = atirador.Cidade,
-                OrgaoEmissor = atirador.OrgaoEmissor,
-                NumeroRG = atirador.NumeroRG,
-                Zona = atirador.Zona,
-                NumeroTitulo = atirador.NumeroTitulo,
+                Endereco = atirador.Endereco,
+                RegistroGeral = atirador.RegistroGeral,
+                TituloEleitor = atirador.TituloEleitor,
                 TotalPontos = atirador.TotalPontos
             };
 
@@ -94,15 +88,9 @@ namespace back_sistema_tg.DAL.DAO
                 TelefonePai = novoAtirador.TelefonePai,
                 CPF = novoAtirador.CPF,
                 Funcao = novoAtirador.Funcao,
-                Logradouro = novoAtirador.Logradouro,
-                Bairro = novoAtirador.Bairro,
-                NumeroEndereco = novoAtirador.NumeroEndereco,
-                CEP = novoAtirador.CEP,
-                Cidade = novoAtirador.Cidade,
-                OrgaoEmissor = novoAtirador.OrgaoEmissor,
-                NumeroRG = novoAtirador.NumeroRG,
-                Zona = novoAtirador.Zona,
-                NumeroTitulo = novoAtirador.NumeroTitulo,
+                Endereco = novoAtirador.Endereco,
+                RegistroGeral = novoAtirador.RegistroGeral,
+                TituloEleitor = novoAtirador.TituloEleitor,
                 TotalPontos = novoAtirador.TotalPontos
             };
 
