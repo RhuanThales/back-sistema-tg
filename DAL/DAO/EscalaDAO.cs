@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
@@ -26,7 +27,7 @@ namespace back_sistema_tg.DAL.DAO
                 PermanenciaTarde = escala.PermanenciaTarde,
                 ComandanteGuarda = escala.ComandanteGuarda,
                 Guardas = escala.Guardas,
-                Dia = escala.Dia
+                Dia = DateTime.Now
 
             };
 
