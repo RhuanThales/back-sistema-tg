@@ -16,12 +16,12 @@ namespace back_sistema_tg.DAL.DAO
         {
             _context = context;
         }
-
         
         public void Inserir(Escala escala)
         {
             Escala novoEscala = new Escala{
                 InstrutorDia = escala.InstrutorDia,
+                NumeroEscala = escala.NumeroEscala,
                 PermanenciaManha = escala.PermanenciaManha,
                 PermanenciaTarde = escala.PermanenciaTarde,
                 ComandanteGuarda = escala.ComandanteGuarda,
@@ -50,6 +50,7 @@ namespace back_sistema_tg.DAL.DAO
         {
             Escala escala = new Escala{
                 IdEscala = id,
+                NumeroEscala = novoEscala.NumeroEscala,
                 InstrutorDia = novoEscala.InstrutorDia,
                 PermanenciaManha = novoEscala.PermanenciaManha,
                 PermanenciaTarde = novoEscala.PermanenciaTarde,

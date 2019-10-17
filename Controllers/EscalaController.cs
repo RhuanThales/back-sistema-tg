@@ -15,7 +15,6 @@ using AutoMapper;
 
 namespace back_sistema_tg.Controllers
 {
-    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("api/[controller]")]
     [ApiController]
     public class EscalaController:ControllerBase
@@ -80,7 +79,6 @@ namespace back_sistema_tg.Controllers
             return Ok(new ApiResponse(200, $"Escala {id} atualizado com sucesso."));
         } 
         
-
         [HttpDelete("Excluir/{id}")]
         public IActionResult Excluir(string id)
         {
@@ -88,8 +86,5 @@ namespace back_sistema_tg.Controllers
 
             return Ok(new ApiResponse(200, $"Escala {id} removido com sucesso."));
         }
-        
-
-
     }
 }

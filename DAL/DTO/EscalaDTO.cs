@@ -7,6 +7,7 @@ namespace back_sistema_tg.DAL.DTO
     public class EscalaDTO
     {
         public string IdEscala { get; set; }
+        public int NumeroEscala { get; set; }
         public string InstrutorDia { get; set; }
         public string [] PermanenciaManha { get; set; }
         public string [] PermanenciaTarde { get; set; }
