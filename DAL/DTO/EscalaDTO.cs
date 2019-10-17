@@ -8,11 +8,13 @@ namespace back_sistema_tg.DAL.DTO
     {
         public string IdEscala { get; set; }
         public int NumeroEscala { get; set; }
-        public string InstrutorDia { get; set; }
-        public string [] PermanenciaManha { get; set; }
-        public string [] PermanenciaTarde { get; set; }
-        public string ComandanteGuarda { get; set; }
-        public string [] Guardas { get; set; }
-        public DateTime Dia { get; set; }
+        public string InstrutorSemana { get; set; }
+        public Diaria Segunda { get; set; }
+        public Diaria Terca { get; set; }
+        public Diaria Quarta { get; set; }
+        public Diaria Quinta { get; set; }
+        public Diaria Sexta { get; set; }
+        public Diaria Sabado { get; set; }
+        public Diaria Domingo { get; set; }
     }
 }

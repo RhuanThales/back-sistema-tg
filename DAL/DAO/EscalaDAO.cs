@@ -20,15 +20,22 @@ namespace back_sistema_tg.DAL.DAO
         
         public void Inserir(Escala escala)
         {
-            Escala novoEscala = new Escala{
-                InstrutorDia = escala.InstrutorDia,
-                NumeroEscala = escala.NumeroEscala,
-                PermanenciaManha = escala.PermanenciaManha,
-                PermanenciaTarde = escala.PermanenciaTarde,
-                ComandanteGuarda = escala.ComandanteGuarda,
-                Guardas = escala.Guardas,
-                Dia = DateTime.Now
+            var qtd = _context.CollectionEscala.Find<Escala>(esc => true).CountDocuments();
 
+            var convert = Convert.ToInt32(qtd);
+
+            var num = convert + 1;
+            
+            Escala novoEscala = new Escala{
+                NumeroEscala = num,
+                InstrutorSemana = escala.InstrutorSemana,
+                Segunda = escala.Segunda,
+                Terca = escala.Terca,
+                Quarta = escala.Quarta,
+                Quinta = escala.Quinta,
+                Sexta = escala.Sexta,
+                Sabado = escala.Sabado,
+                Domingo = escala.Domingo
             };
 
             _context.CollectionEscala.InsertOne(novoEscala);
@@ -47,17 +54,19 @@ namespace back_sistema_tg.DAL.DAO
 
             return escala;
         }
-        public void Atualizar(string id, Escala novoEscala)
+        public void Atualizar(string id, Escala novaEscala)
         {
             Escala escala = new Escala{
                 IdEscala = id,
-                NumeroEscala = novoEscala.NumeroEscala,
-                InstrutorDia = novoEscala.InstrutorDia,
-                PermanenciaManha = novoEscala.PermanenciaManha,
-                PermanenciaTarde = novoEscala.PermanenciaTarde,
-                ComandanteGuarda = novoEscala.ComandanteGuarda,
-                Guardas = novoEscala.Guardas,
-                Dia = novoEscala.Dia
+                NumeroEscala = novaEscala.NumeroEscala,
+                InstrutorSemana = novaEscala.InstrutorSemana,
+                Segunda = novaEscala.Segunda,
+                Terca = novaEscala.Terca,
+                Quarta = novaEscala.Quarta,
+                Quinta = novaEscala.Quinta,
+                Sexta = novaEscala.Sexta,
+                Sabado = novaEscala.Sabado,
+                Domingo = novaEscala.Domingo
             };
 
             _context.CollectionEscala.ReplaceOne(u => u.IdEscala == id, escala);

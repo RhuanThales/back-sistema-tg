@@ -1,6 +1,5 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using System;
 
 namespace back_sistema_tg.DAL.Models
 {
@@ -12,23 +11,29 @@ namespace back_sistema_tg.DAL.Models
         
         [BsonElement("NumeroEscala")]
         public int NumeroEscala { get; set; }
+        
+        [BsonElement("InstrutorSemana")]
+        public string InstrutorSemana { get; set; }
 
-        [BsonElement("InstrutorDia")]
-        public string InstrutorDia { get; set; }
+        [BsonElement("Segunda")]
+        public Diaria Segunda { get; set; }
 
-        [BsonElement("PermanenciaManha")]
-        public string [] PermanenciaManha { get; set; }
+        [BsonElement("Terca")]
+        public Diaria Terca { get; set; }
 
-        [BsonElement("PermanenciaTarde")]
-        public string [] PermanenciaTarde { get; set; }
+        [BsonElement("Quarta")]
+        public Diaria Quarta { get; set; }
 
-        [BsonElement("ComandanteGuarda")]
-        public string ComandanteGuarda { get; set; }
+        [BsonElement("Quinta")]
+        public Diaria Quinta { get; set; }
 
-        [BsonElement("Guardas")]
-        public string [] Guardas { get; set; }
+        [BsonElement("Sexta")]
+        public Diaria Sexta { get; set; }
 
-         [BsonElement("Dia")]
-        public DateTime Dia { get; set; }
+        [BsonElement("Sabado")]
+        public Diaria Sabado { get; set; }
+        
+        [BsonElement("Domingo")]
+        public Diaria Domingo { get; set; }
     }
 }
