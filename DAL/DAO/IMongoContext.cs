@@ -11,5 +11,6 @@ namespace back_sistema_tg.DAL.DAO
         IMongoCollection<Pelotao> CollectionPelotao { get; }
         IMongoCollection<Escala> CollectionEscala { get; }
         IMongoCollection<Frequencia> CollectionFrequencia { get; }
+        IMongoCollection<Chamada> CollectionChamada { get; }
     }
 }

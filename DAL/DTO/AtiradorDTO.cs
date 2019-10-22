@@ -27,6 +27,8 @@ namespace back_sistema_tg.DAL.DTO
         public EnderecoCompleto Endereco { get; set; }
         public RegistroGeral RegistroGeral { get; set; }
         public TituloEleitor TituloEleitor { get; set; }
+        public bool StatusAtirador { get; set; }
         public int TotalPontos { get; set; }
+        public int TotalHoras { get; set; }
     }
 }

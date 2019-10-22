@@ -41,7 +41,9 @@ namespace back_sistema_tg.DAL.DAO
                 Endereco = atirador.Endereco,
                 RegistroGeral = atirador.RegistroGeral,
                 TituloEleitor = atirador.TituloEleitor,
-                TotalPontos = atirador.TotalPontos
+                StatusAtirador = false,
+                TotalPontos = 0,
+                TotalHoras = 0,
             };
 
             _context.CollectionAtirador.InsertOne(novoAtirador);
@@ -49,13 +51,13 @@ namespace back_sistema_tg.DAL.DAO
 
         public List<Atirador> ObterTodos()
         {
-            var colecaoAtirador = _context.CollectionAtirador.Find(atirador => true).ToList();
+            var colecaoAtirador = _context.CollectionAtirador.Find(atirador => atirador.StatusAtirador == false).ToList();
 
             return colecaoAtirador;
         }
          public List<Atirador> ObterPorPelotao(int NumeroPelotao)
         {
-            var pelotaoAtirador = _context.CollectionAtirador.Find<Atirador>(num => num.NumeroPelotao == NumeroPelotao).ToList();
+            var pelotaoAtirador = _context.CollectionAtirador.Find<Atirador>(num => num.NumeroPelotao == NumeroPelotao && num.StatusAtirador == false).ToList();
 
             return pelotaoAtirador;
         }
@@ -91,7 +93,9 @@ namespace back_sistema_tg.DAL.DAO
                 Endereco = novoAtirador.Endereco,
                 RegistroGeral = novoAtirador.RegistroGeral,
                 TituloEleitor = novoAtirador.TituloEleitor,
-                TotalPontos = novoAtirador.TotalPontos
+                StatusAtirador = novoAtirador.StatusAtirador,
+                TotalPontos = novoAtirador.TotalPontos,
+                TotalHoras = novoAtirador.TotalHoras
             };
 
             _context.CollectionAtirador.ReplaceOne(u => u.IdAtirador == id, atirador);

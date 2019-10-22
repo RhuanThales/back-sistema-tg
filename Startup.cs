@@ -130,6 +130,9 @@ namespace back_sistema_tg
             services.AddScoped<IFrequenciaDAO, FrequenciaDAO>();
             services.AddScoped<IFrequenciaBll, FrequenciaBll>();
 
+            services.AddScoped<IChamadaDAO, ChamadaDAO>();
+            services.AddScoped<IChamadaBll, ChamadaBll>();
+
             services.AddScoped<SeedingService>();
         }
 

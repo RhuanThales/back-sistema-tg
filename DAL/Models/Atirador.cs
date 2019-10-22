@@ -73,7 +73,13 @@ namespace back_sistema_tg.DAL.Models
         [BsonElement("TituloEleitor")]
         public TituloEleitor TituloEleitor { get; set; }
 
+        [BsonElement("StatusAtirador")]
+        public bool StatusAtirador { get; set; }  
+
         [BsonElement("TotalPontos")]
-        public int TotalPontos { get; set; }        
+        public int TotalPontos { get; set; }
+
+        [BsonElement("TotalHoras")]
+        public int TotalHoras { get; set; }    
     }
 }

@@ -43,6 +43,12 @@ namespace back_sistema_tg
                 AfterMap((dto, model) => model.IdFrequencia = dto.IdFrequencia);
             CreateMap<Frequencia, FrequenciaDTO>()
                 .AfterMap((model, dto) => dto.IdFrequencia = model.IdFrequencia);
+
+                    // Mapeando a classe Frequencia
+            CreateMap<ChamadaDTO, Chamada>().
+                AfterMap((dto, model) => model.IdChamada = dto.IdChamada);
+            CreateMap<Chamada, ChamadaDTO>()
+                .AfterMap((model, dto) => dto.IdChamada = model.IdChamada);
         }
     }
 }
