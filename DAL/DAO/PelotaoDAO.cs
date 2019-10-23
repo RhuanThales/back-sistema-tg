@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
@@ -36,7 +38,7 @@ namespace back_sistema_tg.DAL.DAO
         {
             var colecaoPelotao = _context.CollectionPelotao.Find(Pelotao => true).ToList();
 
-            return colecaoPelotao;
+            return colecaoPelotao.OrderBy(p => p.NumeroPelotao).ToList();
         }
 
         public Pelotao ObterPorId(string id)

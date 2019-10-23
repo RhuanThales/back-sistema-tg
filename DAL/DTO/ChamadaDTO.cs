@@ -12,5 +12,6 @@ namespace back_sistema_tg.DAL.DTO
         public string Usuario { get; set; }
         public string [] AtiradoresPresentes { get; set; }
         public string [] AtiradoresFaltosos { get; set; }
+        public string [] AtiradoresJustificados { get; set; }
     }
 }

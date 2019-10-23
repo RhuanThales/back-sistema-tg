@@ -11,7 +11,7 @@ namespace back_sistema_tg.DAL.Models
         public string IdFrequencia { get; set; }
         
         [BsonElement("Data")]
-        public DateTime Data { get; set; }
+        public string Data { get; set; }
 
         [BsonElement("Tipo")]
         public string Tipo { get; set; }

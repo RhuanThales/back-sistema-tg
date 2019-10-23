@@ -26,7 +26,8 @@ namespace back_sistema_tg.DAL.DAO
                 HorarioChamada = chamada.HorarioChamada,
                 Usuario = chamada.Usuario,
                 AtiradoresPresentes = chamada.AtiradoresPresentes,
-                AtiradoresFaltosos = chamada.AtiradoresFaltosos
+                AtiradoresFaltosos = chamada.AtiradoresFaltosos,
+                AtiradoresJustificados = chamada.AtiradoresJustificados
             };
 
             _context.CollectionChamada.InsertOne(novaChamada);
@@ -54,7 +55,8 @@ namespace back_sistema_tg.DAL.DAO
                 HorarioChamada = novaChamada.HorarioChamada,
                 Usuario = novaChamada.Usuario,
                 AtiradoresPresentes = novaChamada.AtiradoresPresentes,
-                AtiradoresFaltosos = novaChamada.AtiradoresFaltosos
+                AtiradoresFaltosos = novaChamada.AtiradoresFaltosos,
+                AtiradoresJustificados = novaChamada.AtiradoresJustificados
             };
 
             _context.CollectionChamada.ReplaceOne(u => u.IdChamada == id, chamada);

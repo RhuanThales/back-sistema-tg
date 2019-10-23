@@ -26,7 +26,6 @@ namespace back_sistema_tg.DAL.DAO
                 CRAtirador = frequencia.CRAtirador,
                 PesoHoras = frequencia.PesoHoras,
                 Presenca = frequencia.Presenca
-
             };
 
             _context.CollectionFrequencia.InsertOne(novaFrequencia);

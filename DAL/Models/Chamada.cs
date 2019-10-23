@@ -26,5 +26,8 @@ namespace back_sistema_tg.DAL.Models
         
         [BsonElement("AtiradoresFaltosos")]
         public string [] AtiradoresFaltosos { get; set; }
+
+        [BsonElement("AtiradoresJustificados")]
+        public string [] AtiradoresJustificados { get; set; }
     }
 }

@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
@@ -69,13 +70,13 @@ namespace back_sistema_tg.DAL.DAO
         {
             var colecaoAtirador = _context.CollectionAtirador.Find(atirador => atirador.StatusAtirador == false).ToList();
 
-            return colecaoAtirador;
+            return colecaoAtirador.OrderBy(a => a.NumeroAtirador).ToList();
         }
          public List<Atirador> ObterPorPelotao(int NumeroPelotao)
         {
             var pelotaoAtirador = _context.CollectionAtirador.Find<Atirador>(num => num.NumeroPelotao == NumeroPelotao && num.StatusAtirador == false).ToList();
 
-            return pelotaoAtirador;
+            return pelotaoAtirador.OrderBy(a => a.NumeroAtirador).ToList();
         }
 
         public Atirador ObterPorId(string id)
