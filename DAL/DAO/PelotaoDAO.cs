@@ -27,7 +27,6 @@ namespace back_sistema_tg.DAL.DAO
                 NomePelotao = pelotao.NomePelotao,
                 NumeroPelotao = pelotao.NumeroPelotao,
                 Comandante = pelotao.Comandante,
-                Monitor = pelotao.Monitor
                 
             };
 
@@ -56,7 +55,6 @@ namespace back_sistema_tg.DAL.DAO
                 NomePelotao = novoPelotao.NomePelotao,
                 NumeroPelotao = novoPelotao.NumeroPelotao,
                 Comandante = novoPelotao.Comandante,
-                Monitor = novoPelotao.Monitor
 
             };
 

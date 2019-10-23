@@ -18,7 +18,5 @@ namespace back_sistema_tg.DAL.Models
         [BsonElement("Comandante")]
         public string Comandante { get; set; }
 
-        [BsonElement("Monitor")]
-        public string Monitor { get; set; }
     }
 }
