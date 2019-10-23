@@ -20,30 +20,46 @@ namespace back_sistema_tg.DAL.DAO
         public void Inserir(Atirador atirador)
         {
             Atirador novoAtirador = new Atirador{
-                CR = atirador.CR,
+                // Dados Pessoais
                 NomeAtirador = atirador.NomeAtirador,
-                NumeroPelotao = atirador.NumeroPelotao,
-                NomeGuerra = atirador.NomeGuerra,
-                NumeroAtirador = atirador.NumeroAtirador,
-                Religiao = atirador.Religiao,
-                Escolaridade = atirador.Escolaridade,
-                Volutario = atirador.Volutario,
                 DataNascimento = atirador.DataNascimento,
+                CPF = atirador.CPF,
+                RegistroGeral = atirador.RegistroGeral,
+                TituloEleitor = atirador.TituloEleitor,
                 Naturalidade = atirador.Naturalidade,
-                NaturalidadeCR = atirador.NaturalidadeCR,
                 NomePai = atirador.NomePai,
                 NomeMae = atirador.NomeMae,
+                Religiao = atirador.Religiao,
+                Escolaridade = atirador.Escolaridade,
+
+                // Dados de Endereço/Contato
+                Endereco = atirador.Endereco,
                 Telefone = atirador.Telefone,
                 TelefonePai = atirador.TelefonePai,
                 TelefoneMae = atirador.TelefoneMae,
-                CPF = atirador.CPF,
+
+                // Dados do Tiro de Guerra
+                CR = atirador.CR,
+                NaturalidadeCR = atirador.NaturalidadeCR,
+                NomeGuerra = atirador.NomeGuerra,
+                NumeroAtirador = atirador.NumeroAtirador,
+                NumeroPelotao = atirador.NumeroPelotao,
                 Funcao = atirador.Funcao,
-                Endereco = atirador.Endereco,
-                RegistroGeral = atirador.RegistroGeral,
-                TituloEleitor = atirador.TituloEleitor,
-                StatusAtirador = false,
+                Volutario = atirador.Volutario,
+                StatusAtirador = false, // False informa que ele não foi desligado do TG
+                
+                // Dados de Pontuação
+                PontosJustificados = 0,
+                PontosNaoJustificados = 0,
                 TotalPontos = 0,
+
+                // Dados de Horas/Tempo de Serviço
+                HorasCfc = 0,
+                HorasInstrucao = 0,
+                HorasExtras = 0,
+                HorasServico = 0,
                 TotalHoras = 0,
+                TotalDias = 0,
             };
 
             _context.CollectionAtirador.InsertOne(novoAtirador);
@@ -73,29 +89,46 @@ namespace back_sistema_tg.DAL.DAO
         {
             Atirador atirador = new Atirador{
                 IdAtirador = id,
-                CR = novoAtirador.CR,
+                // Dados Pessoais
                 NomeAtirador = novoAtirador.NomeAtirador,
-                NumeroPelotao = novoAtirador.NumeroPelotao,
-                NomeGuerra = novoAtirador.NomeGuerra,
-                NumeroAtirador = novoAtirador.NumeroAtirador,
-                Religiao = novoAtirador.Religiao,
-                Escolaridade = novoAtirador.Escolaridade,
-                Volutario = novoAtirador.Volutario,
                 DataNascimento = novoAtirador.DataNascimento,
-                Naturalidade = novoAtirador.Naturalidade,
-                NaturalidadeCR = novoAtirador.NaturalidadeCR,
-                NomePai = novoAtirador.NomePai,
-                NomeMae = novoAtirador.NomeMae,
-                Telefone = novoAtirador.Telefone,
-                TelefonePai = novoAtirador.TelefonePai,
                 CPF = novoAtirador.CPF,
-                Funcao = novoAtirador.Funcao,
-                Endereco = novoAtirador.Endereco,
                 RegistroGeral = novoAtirador.RegistroGeral,
                 TituloEleitor = novoAtirador.TituloEleitor,
+                Naturalidade = novoAtirador.Naturalidade,
+                NomePai = novoAtirador.NomePai,
+                NomeMae = novoAtirador.NomeMae,
+                Religiao = novoAtirador.Religiao,
+                Escolaridade = novoAtirador.Escolaridade,
+
+                // Dados de Endereço/Contato
+                Endereco = novoAtirador.Endereco,
+                Telefone = novoAtirador.Telefone,
+                TelefonePai = novoAtirador.TelefonePai,
+                TelefoneMae = novoAtirador.TelefoneMae,
+
+                // Dados do Tiro de Guerra
+                CR = novoAtirador.CR,
+                NaturalidadeCR = novoAtirador.NaturalidadeCR,
+                NomeGuerra = novoAtirador.NomeGuerra,
+                NumeroAtirador = novoAtirador.NumeroAtirador,
+                NumeroPelotao = novoAtirador.NumeroPelotao,
+                Funcao = novoAtirador.Funcao,
+                Volutario = novoAtirador.Volutario,
                 StatusAtirador = novoAtirador.StatusAtirador,
+                
+                // Dados de Pontuação
+                PontosJustificados = novoAtirador.PontosJustificados,
+                PontosNaoJustificados = novoAtirador.PontosNaoJustificados,
                 TotalPontos = novoAtirador.TotalPontos,
-                TotalHoras = novoAtirador.TotalHoras
+
+                // Dados de Horas/Tempo de Serviço
+                HorasCfc = novoAtirador.HorasCfc,
+                HorasInstrucao = novoAtirador.HorasInstrucao,
+                HorasExtras = novoAtirador.HorasExtras,
+                HorasServico = novoAtirador.HorasServico,
+                TotalHoras = novoAtirador.TotalHoras,
+                TotalDias = novoAtirador.TotalDias,
             };
 
             _context.CollectionAtirador.ReplaceOne(u => u.IdAtirador == id, atirador);
