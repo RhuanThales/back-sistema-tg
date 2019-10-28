@@ -91,6 +91,26 @@ namespace back_sistema_tg.Controllers
             return Ok(new ApiOkResponse(listaAtirador));
         }
 
+        [HttpGet("ObterMonitor/{ObterMonitor}")]
+        public ActionResult<List<AtiradorDTO>> ObterMonitor(string Funcao)
+        {
+            var teste = _atiradorBll.ObterMonitor(Funcao);
+
+            if (teste == null)
+            {
+                return NotFound(new ApiResponse(404, $"O Atirador nao e monitor."));
+            }            
+
+            List<AtiradorDTO> listaAtirador = new List<AtiradorDTO>();
+
+            foreach (var item in teste)
+            {
+                listaAtirador.Add(_mapper.Map<AtiradorDTO>(item));
+            }
+
+            return Ok(new ApiOkResponse(listaAtirador));
+        }
+
         [HttpPut("Atualizar/{id}")]
         public IActionResult Atualizar(string id, AtiradorDTO atirador)
         {

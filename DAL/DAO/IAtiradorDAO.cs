@@ -14,6 +14,7 @@ namespace back_sistema_tg.DAL.DAO
         List<Atirador> ObterTodos();
         //Obter os Atiradores por Pelotão
         List<Atirador> ObterPorPelotao(int NumeroPelotao);
+        List<Atirador> ObterMonitor(string Funcao);
         Atirador ObterPorId(string id);
         // Update
         void Atualizar(string id, Atirador novoAtirador);

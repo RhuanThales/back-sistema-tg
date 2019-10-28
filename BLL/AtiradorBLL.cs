@@ -49,6 +49,20 @@ namespace back_sistema_tg.BLL
             
         }
 
+        public List<Atirador> ObterMonitor(string Funcao){
+            try
+            {
+                var monitor = _atiradorDAO.ObterMonitor(Funcao);
+                return monitor;
+            }
+            catch (System.Exception ex)
+            {
+                
+                throw new System.Exception(ex.Message);
+            }
+            
+        }
+
         public void Atualizar(string IdAtirador, Atirador novoAtirador)
         {
             bool hasAny = (_atiradorDAO.ObterPorId(IdAtirador))!=null;

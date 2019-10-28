@@ -79,6 +79,13 @@ namespace back_sistema_tg.DAL.DAO
             return pelotaoAtirador.OrderBy(a => a.NumeroAtirador).ToList();
         }
 
+         public List<Atirador> ObterMonitor(string Funcao)
+        {
+            var monitorAtirador = _context.CollectionAtirador.Find<Atirador>(func => func.Funcao == "Monitor" && func.StatusAtirador == false).ToList();
+
+            return monitorAtirador.OrderBy(a => a.NumeroAtirador).ToList();
+        }
+
         public Atirador ObterPorId(string id)
         {
             var atirador = _context.CollectionAtirador.Find<Atirador>(u => u.IdAtirador == id).FirstOrDefault();
