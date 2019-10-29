@@ -12,7 +12,7 @@ namespace back_sistema_tg.BLL
         List<Atirador> ObterTodos();
         Atirador ObterPorId(string IdAtirador);
         List<Atirador> ObterPorPelotao(int NumeroPelotao);
-        List<Atirador> ObterMonitor(string funcao);
+        List<Atirador> ObterMonitores();
         // Update
         void Atualizar(string id, Atirador novoAtirador);
         // Delete

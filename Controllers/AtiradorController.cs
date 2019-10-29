@@ -91,10 +91,10 @@ namespace back_sistema_tg.Controllers
             return Ok(new ApiOkResponse(listaAtirador));
         }
 
-        [HttpGet("ObterMonitor/{ObterMonitor}")]
-        public ActionResult<List<AtiradorDTO>> ObterMonitor(string Funcao)
+        [HttpGet("ObterMonitores")]
+        public ActionResult<List<AtiradorDTO>> ObterMonitores()
         {
-            var teste = _atiradorBll.ObterMonitor(Funcao);
+            var teste = _atiradorBll.ObterMonitores();
 
             if (teste == null)
             {

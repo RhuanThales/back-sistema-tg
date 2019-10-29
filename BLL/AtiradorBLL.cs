@@ -49,10 +49,10 @@ namespace back_sistema_tg.BLL
             
         }
 
-        public List<Atirador> ObterMonitor(string Funcao){
+        public List<Atirador> ObterMonitores(){
             try
             {
-                var monitor = _atiradorDAO.ObterMonitor(Funcao);
+                var monitor = _atiradorDAO.ObterMonitores();
                 return monitor;
             }
             catch (System.Exception ex)
