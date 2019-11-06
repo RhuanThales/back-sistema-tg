@@ -72,14 +72,22 @@ namespace back_sistema_tg.Controllers
             return Ok(new ApiOkResponse(_mapper.Map<OficialDTO>(model)));
         }
 
+        [HttpGet("ObterChefeInstrucao")]
+        public ActionResult<OficialDTO> ObterChefeInstrucao()
+        {
+            var model = _oficialBll.ObterChefeInstrucao();
+
+            if (model == null)
+            {
+                return NotFound(new ApiResponse(404, $"O Oficial não foi encontrado."));
+            }            
+
+            return Ok(new ApiOkResponse(_mapper.Map<OficialDTO>(model)));
+        }
+
         [HttpPut("Atualizar/{id}")]
         public IActionResult Atualizar(string id, OficialDTO oficial)
         {
-            /* if (!ModelState.IsValid)
-            {
-                return BadRequest(new ApiBadRequestResponse(ModelState));
-            } */
-
             _oficialBll.Atualizar(id, _mapper.Map<Oficial>(oficial));
 
             return Ok(new ApiResponse(200, $"Oficial {id} atualizado com sucesso."));
@@ -89,18 +97,9 @@ namespace back_sistema_tg.Controllers
         [HttpDelete("Excluir/{id}")]
         public IActionResult Excluir(string id)
         {
-            /* if (!ModelState.IsValid)
-            {
-                return BadRequest(new ApiBadRequestResponse(ModelState));
-            } */
-
             _oficialBll.Excluir(id);
 
             return Ok(new ApiResponse(200, $"Oficial {id} removido com sucesso."));
         }
-        
-
-
-    }
-        
+    }     
 }

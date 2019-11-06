@@ -14,8 +14,10 @@ using back_sistema_tg.BLL.Exceptions;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 using back_sistema_tg.DAL.Models;
+using back_sistema_tg.DAL.DAO;
 using back_sistema_tg.Extensions.Responses;
 using AutoMapper;
+using MongoDB.Driver;
 
 namespace back_sistema_tg.Controllers
 {
@@ -25,12 +27,14 @@ namespace back_sistema_tg.Controllers
     public class TokenController:ControllerBase
     {
         private readonly IUsuarioBll _usuarioBll;
+        private readonly IMongoContext _context;
         private ILoggerManager _logger;
         private IMapper _mapper;
         
-        public TokenController(IUsuarioBll usuarioBll, ILoggerManager logger, IMapper mapper)
+        public TokenController(IUsuarioBll usuarioBll, IMongoContext context, ILoggerManager logger, IMapper mapper)
         {
             _usuarioBll = usuarioBll;
+            _context = context;
             _logger = logger;
             _mapper = mapper;
         }
@@ -84,11 +88,19 @@ namespace back_sistema_tg.Controllers
 
             var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
 
+            var nomeChefe = "*************";;
+
+            var chefe = _context.CollectionOficial.Find<Oficial>(u => u.ChefeInstrucao == true).FirstOrDefault();
+
+            if(chefe != null){
+                nomeChefe = chefe.Nome;
+            }
 
             var statusToken = new StatusTokenDTO
             {
-                Nome = objeto.Nome,
                 Token = tokenString,
+                Nome = objeto.Nome,
+                ChefeInstrucao = nomeChefe,
                 PerfilSuper = objeto.PerfilSuper
             };
 

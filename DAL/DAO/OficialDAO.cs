@@ -45,6 +45,12 @@ namespace back_sistema_tg.DAL.DAO
             return Oficial;
         }
 
+        public Oficial ObterChefeInstrucao()
+        {
+            var Oficial = _context.CollectionOficial.Find<Oficial>(u => u.ChefeInstrucao == true).FirstOrDefault();
+
+            return Oficial;
+        }
 
         public void Atualizar(string id, Oficial novoOficial)
         {

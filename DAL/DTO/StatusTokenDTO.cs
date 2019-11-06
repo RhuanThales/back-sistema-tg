@@ -5,5 +5,6 @@ namespace back_sistema_tg.DAL.DTO
         public string Nome { get; set; }
         public bool PerfilSuper { get; set; }
         public string Token { get; set; }
+        public string ChefeInstrucao { get; set; }
     }
 }

@@ -11,6 +11,7 @@ namespace back_sistema_tg.BLL.Exceptions
         // Read
         List<Oficial> ObterTodos();
         Oficial ObterPorId(string IdOficial);
+        Oficial ObterChefeInstrucao();
         // Update
         void Atualizar(string id, Oficial novoOficial);
         // Delete

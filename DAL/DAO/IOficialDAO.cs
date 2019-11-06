@@ -13,6 +13,7 @@ namespace back_sistema_tg.DAL.DAO
         // Read
         List<Oficial> ObterTodos();
         Oficial ObterPorId(string id);
+        Oficial ObterChefeInstrucao();
         // Update
         void Atualizar(string id, Oficial novoOficial);
         // Delete

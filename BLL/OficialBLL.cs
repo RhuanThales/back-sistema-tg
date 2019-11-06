@@ -35,6 +35,13 @@ namespace back_sistema_tg.BLL
             return oficial;
         }
 
+        public Oficial ObterChefeInstrucao()
+        {
+            var oficial = _oficialDAO.ObterChefeInstrucao();
+
+            return oficial;
+        }
+
         public void Atualizar(string IdOficial, Oficial novoOficial)
         {
             bool hasAny = (_oficialDAO.ObterPorId(IdOficial))!=null;
