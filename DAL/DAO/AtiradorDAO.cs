@@ -268,7 +268,7 @@ namespace back_sistema_tg.DAL.DAO
             {
                 var atirador = _context.CollectionAtirador.Find<Atirador>(a => a.CR == item).FirstOrDefault();
 
-                var horas = atirador.HorasInstrucao + 4;
+                var horas = atirador.HorasInstrucao + 2;
 
                 _context.CollectionAtirador.UpdateOne(at =>
                     at.IdAtirador == atirador.IdAtirador,
