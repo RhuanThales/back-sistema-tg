@@ -86,6 +86,13 @@ namespace back_sistema_tg.DAL.DAO
             return monitorAtirador.OrderBy(a => a.NumeroAtirador).ToList();
         }
 
+        public List<Atirador> ObterDesligados()
+        {
+            var statusAtirador = _context.CollectionAtirador.Find<Atirador>(stat => stat.StatusAtirador == true).ToList();
+
+            return statusAtirador.OrderBy(a => a.NumeroAtirador).ToList();
+        }
+
         public Atirador ObterPorId(string id)
         {
             var atirador = _context.CollectionAtirador.Find<Atirador>(u => u.IdAtirador == id).FirstOrDefault();

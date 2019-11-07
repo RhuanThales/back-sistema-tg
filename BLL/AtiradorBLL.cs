@@ -63,6 +63,20 @@ namespace back_sistema_tg.BLL
             
         }
 
+         public List<Atirador> ObterDesligados(){
+            try
+            {
+                var desligados = _atiradorDAO.ObterDesligados();
+                return desligados;
+            }
+            catch (System.Exception ex)
+            {
+                
+                throw new System.Exception(ex.Message);
+            }
+            
+        }
+
         public void Atualizar(string IdAtirador, Atirador novoAtirador)
         {
             bool hasAny = (_atiradorDAO.ObterPorId(IdAtirador))!=null;

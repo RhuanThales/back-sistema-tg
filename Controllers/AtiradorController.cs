@@ -111,6 +111,26 @@ namespace back_sistema_tg.Controllers
             return Ok(new ApiOkResponse(listaAtirador));
         }
 
+        [HttpGet("ObterDesligados")]
+        public ActionResult<List<AtiradorDTO>> ObterDesligados()
+        {
+            var teste = _atiradorBll.ObterDesligados();
+
+            if (teste == null)
+            {
+                return NotFound(new ApiResponse(404, $"Nao ha atiradores desligados."));
+            }            
+
+            List<AtiradorDTO> listaAtirador = new List<AtiradorDTO>();
+
+            foreach (var item in teste)
+            {
+                listaAtirador.Add(_mapper.Map<AtiradorDTO>(item));
+            }
+
+            return Ok(new ApiOkResponse(listaAtirador));
+        }
+
         [HttpPut("Atualizar/{id}")]
         public IActionResult Atualizar(string id, AtiradorDTO atirador)
         {
