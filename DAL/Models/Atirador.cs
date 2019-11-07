@@ -86,8 +86,8 @@ namespace back_sistema_tg.DAL.Models
         [BsonElement("PontosNaoJustificados")]
         public int PontosNaoJustificados { get; set; }
 
-        [BsonElement("TotalPontos")]
-        public int TotalPontos { get; set; } // Soma dos pontos justificados e não justificados
+        /* [BsonElement("TotalPontos")]
+        public int TotalPontos { get; set; } */
 
         // Dados de Horas/Tempo de Serviço
         [BsonElement("HorasCfc")]
@@ -102,10 +102,10 @@ namespace back_sistema_tg.DAL.Models
         [BsonElement("HorasServico")]
         public int HorasServico { get; set; }
 
-        [BsonElement("TotalHoras")]
-        public int TotalHoras { get; set; } // Soma de todos os valores dos atributos de horas
+        /* [BsonElement("TotalHoras")]
+        public int TotalHoras { get; set; } */
 
-        [BsonElement("TotalDias")]
-        public int TotalDias { get; set; } // Divide-se o total de horas por 8
+        /* [BsonElement("TotalDias")]
+        public int TotalDias { get; set; } */
     }
 }

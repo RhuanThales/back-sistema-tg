@@ -9,6 +9,9 @@ namespace back_sistema_tg.DAL.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string IdChamada { get; set; }
         
+        [BsonElement("StatusChamada")]
+        public bool StatusChamada { get; set; }
+
         [BsonElement("NumeroPelotao")]
         public int NumeroPelotao { get; set; }
         

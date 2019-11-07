@@ -86,5 +86,13 @@ namespace back_sistema_tg.Controllers
 
             return Ok(new ApiResponse(200, $"Chamada {id} removida com sucesso."));
         }
+
+        [HttpPut("ConfirmarChamada/{idChamada}")]
+        public IActionResult ConfirmarChamada(string idChamada)
+        {
+            _chamadaBll.ConfirmarChamada(idChamada);
+
+            return Ok(new ApiResponse(200, $"Chamada {idChamada} confirmada com sucesso."));
+        }
     }
 }

@@ -11,15 +11,19 @@ namespace back_sistema_tg.DAL.DAO
         // Create
         void Inserir(Atirador atirador);
         // Read
-        List<Atirador> ObterTodos();
+        List<AtiradorDTO> ObterTodos();
         //Obter os Atiradores por Pelotão
         List<Atirador> ObterPorPelotao(int NumeroPelotao);
         List<Atirador> ObterMonitores();
-        List<Atirador> ObterDesligados();
+        List<AtiradorDTO> ObterDesligados();
         Atirador ObterPorId(string id);
         // Update
         void Atualizar(string id, Atirador novoAtirador);
         // Delete
         void Excluir(string id);
+        // Métodos de Cálculo
+        void Presenca(string [] atiradoresPresentes);
+        void Falta(string [] atiradoresFaltosos);
+        void Justificados(string [] atiradoresJustificados);
     }
 }

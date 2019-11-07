@@ -73,5 +73,26 @@ namespace back_sistema_tg.BLL
                 throw new IntegrityException("Não foi possível efetuar a remoção.");
             }
         }
+
+        public void ConfirmarChamada(string idChamada)
+        { 
+            var obj = _chamadaDAO.ObterPorId(idChamada);
+
+            bool hasAny = obj!=null;
+            
+            if (!hasAny)
+            {
+                throw new NotFoundException("Id não encontrado.");
+            }
+
+            try
+            {
+                _chamadaDAO.ConfirmarChamada(obj.IdChamada);
+            }
+            catch (DbUpdateException)
+            {
+                throw new IntegrityException("Não foi possível efetuar a remoção.");
+            }
+        }
     }
 }

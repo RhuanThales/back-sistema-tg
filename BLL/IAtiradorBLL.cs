@@ -9,11 +9,11 @@ namespace back_sistema_tg.BLL
         // Create
         void Inserir(Atirador atirador);
         // Read
-        List<Atirador> ObterTodos();
+        List<AtiradorDTO> ObterTodos();
         Atirador ObterPorId(string IdAtirador);
         List<Atirador> ObterPorPelotao(int NumeroPelotao);
         List<Atirador> ObterMonitores();
-        List<Atirador> ObterDesligados();
+        List<AtiradorDTO> ObterDesligados();
         // Update
         void Atualizar(string id, Atirador novoAtirador);
         // Delete

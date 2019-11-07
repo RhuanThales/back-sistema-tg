@@ -10,17 +10,20 @@ namespace back_sistema_tg.DAL.DAO
     public class ChamadaDAO : IChamadaDAO
     {
         // Injeção de Dependências
+        public readonly IAtiradorDAO _atiradorDAO;
         private readonly IMongoContext _context;
 
         // Método Construtor da classe
-        public ChamadaDAO(IMongoContext context)
+        public ChamadaDAO(IAtiradorDAO atiradorDAO, IMongoContext context)
         {
+            _atiradorDAO = atiradorDAO;
             _context = context;
         }
         
         public void Inserir(Chamada chamada)
         {            
             Chamada novaChamada = new Chamada{
+                StatusChamada = false,
                 NumeroPelotao = chamada.NumeroPelotao,
                 DataChamada = chamada.DataChamada,
                 HorarioChamada = chamada.HorarioChamada,
@@ -50,6 +53,7 @@ namespace back_sistema_tg.DAL.DAO
         {
             Chamada chamada = new Chamada{
                 IdChamada = id,
+                StatusChamada = false,
                 NumeroPelotao = novaChamada.NumeroPelotao,
                 DataChamada = novaChamada.DataChamada,
                 HorarioChamada = novaChamada.HorarioChamada,
@@ -65,6 +69,21 @@ namespace back_sistema_tg.DAL.DAO
         public void Excluir(string id)
         {
             _context.CollectionChamada.DeleteOne(chamada => chamada.IdChamada == id);
+        }
+
+        public void ConfirmarChamada(string idChamada)
+        {
+            var chamada = _context.CollectionChamada.Find<Chamada>(c => c.IdChamada == idChamada).FirstOrDefault();
+
+            _atiradorDAO.Presenca(chamada.AtiradoresPresentes);
+            _atiradorDAO.Falta(chamada.AtiradoresFaltosos);
+            _atiradorDAO.Justificados(chamada.AtiradoresJustificados);
+
+            _context.CollectionChamada.UpdateOne(ch =>
+                ch.IdChamada == chamada.IdChamada,
+                Builders<Chamada>.Update.Set(cha => cha.StatusChamada, true),
+                new UpdateOptions { IsUpsert = false }
+            );
         }
     }
 }

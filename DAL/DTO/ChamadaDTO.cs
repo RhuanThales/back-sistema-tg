@@ -6,6 +6,7 @@ namespace back_sistema_tg.DAL.DTO
     public class ChamadaDTO
     {
         public string IdChamada { get; set; }
+        public bool StatusChamada { get; set; }
         public int NumeroPelotao { get; set; }
         public string DataChamada { get; set; }
         public string HorarioChamada { get; set; }

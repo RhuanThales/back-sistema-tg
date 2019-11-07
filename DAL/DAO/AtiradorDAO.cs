@@ -52,25 +52,79 @@ namespace back_sistema_tg.DAL.DAO
                 // Dados de Pontuação
                 PontosJustificados = 0,
                 PontosNaoJustificados = 0,
-                TotalPontos = 0,
+                // TotalPontos = 0,
 
                 // Dados de Horas/Tempo de Serviço
                 HorasCfc = 0,
                 HorasInstrucao = 0,
                 HorasExtras = 0,
                 HorasServico = 0,
-                TotalHoras = 0,
-                TotalDias = 0,
+                // TotalHoras = 0,
+                // TotalDias = 0,
             };
 
             _context.CollectionAtirador.InsertOne(novoAtirador);
         }
 
-        public List<Atirador> ObterTodos()
+        public List<AtiradorDTO> ObterTodos()
         {
+            List<AtiradorDTO> atiradores = new List<AtiradorDTO>();
+            
             var colecaoAtirador = _context.CollectionAtirador.Find(atirador => atirador.StatusAtirador == false).ToList();
 
-            return colecaoAtirador.OrderBy(a => a.NumeroAtirador).ToList();
+            foreach (var item in colecaoAtirador)
+            {
+                var pontosTotais = item.PontosJustificados + item.PontosNaoJustificados;
+                var horasTotais = item.HorasCfc + item.HorasInstrucao + item.HorasExtras + item.HorasServico;
+                
+                AtiradorDTO at = new AtiradorDTO{    
+                    IdAtirador = item.IdAtirador,
+                    // Dados Pessoais
+                    NomeAtirador = item.NomeAtirador,
+                    DataNascimento = item.DataNascimento,
+                    CPF = item.CPF,
+                    RegistroGeral = item.RegistroGeral,
+                    TituloEleitor = item.TituloEleitor,
+                    Naturalidade = item.Naturalidade,
+                    NomePai = item.NomePai,
+                    NomeMae = item.NomeMae,
+                    Religiao = item.Religiao,
+                    Escolaridade = item.Escolaridade,
+
+                    // Dados de Endereço/Contato
+                    Endereco = item.Endereco,
+                    Telefone = item.Telefone,
+                    TelefonePai = item.TelefonePai,
+                    TelefoneMae = item.TelefoneMae,
+
+                    // Dados do Tiro de Guerra
+                    CR = item.CR,
+                    NaturalidadeCR = item.NaturalidadeCR,
+                    NomeGuerra = item.NomeGuerra,
+                    NumeroAtirador = item.NumeroAtirador,
+                    NumeroPelotao = item.NumeroPelotao,
+                    Funcao = item.Funcao,
+                    Volutario = item.Volutario,
+                    StatusAtirador = item.StatusAtirador, // False informa que ele não foi desligado do TG
+                    
+                    // Dados de Pontuação
+                    PontosJustificados = item.PontosJustificados,
+                    PontosNaoJustificados = item.PontosNaoJustificados,
+                    TotalPontos = pontosTotais,
+
+                    // Dados de Horas/Tempo de Serviço
+                    HorasCfc = item.HorasCfc,
+                    HorasInstrucao = item.HorasInstrucao,
+                    HorasExtras = item.HorasExtras,
+                    HorasServico = item.HorasServico,
+                    TotalHoras = horasTotais,
+                    TotalDias = horasTotais / 8,
+                };
+
+                atiradores.Add(at);
+            }
+            
+            return atiradores.OrderBy(a => a.NumeroAtirador).ToList();
         }
          public List<Atirador> ObterPorPelotao(int NumeroPelotao)
         {
@@ -86,11 +140,65 @@ namespace back_sistema_tg.DAL.DAO
             return monitorAtirador.OrderBy(a => a.NumeroAtirador).ToList();
         }
 
-        public List<Atirador> ObterDesligados()
+        public List<AtiradorDTO> ObterDesligados()
         {
-            var statusAtirador = _context.CollectionAtirador.Find<Atirador>(stat => stat.StatusAtirador == true).ToList();
+            List<AtiradorDTO> atiradores = new List<AtiradorDTO>();
+            
+            var desligados = _context.CollectionAtirador.Find<Atirador>(stat => stat.StatusAtirador == true).ToList();
 
-            return statusAtirador.OrderBy(a => a.NumeroAtirador).ToList();
+            foreach (var item in desligados)
+            {
+                var pontosTotais = item.PontosJustificados + item.PontosNaoJustificados;
+                var horasTotais = item.HorasCfc + item.HorasInstrucao + item.HorasExtras + item.HorasServico;
+                
+                AtiradorDTO at = new AtiradorDTO{    
+                    IdAtirador = item.IdAtirador,
+                    // Dados Pessoais
+                    NomeAtirador = item.NomeAtirador,
+                    DataNascimento = item.DataNascimento,
+                    CPF = item.CPF,
+                    RegistroGeral = item.RegistroGeral,
+                    TituloEleitor = item.TituloEleitor,
+                    Naturalidade = item.Naturalidade,
+                    NomePai = item.NomePai,
+                    NomeMae = item.NomeMae,
+                    Religiao = item.Religiao,
+                    Escolaridade = item.Escolaridade,
+
+                    // Dados de Endereço/Contato
+                    Endereco = item.Endereco,
+                    Telefone = item.Telefone,
+                    TelefonePai = item.TelefonePai,
+                    TelefoneMae = item.TelefoneMae,
+
+                    // Dados do Tiro de Guerra
+                    CR = item.CR,
+                    NaturalidadeCR = item.NaturalidadeCR,
+                    NomeGuerra = item.NomeGuerra,
+                    NumeroAtirador = item.NumeroAtirador,
+                    NumeroPelotao = item.NumeroPelotao,
+                    Funcao = item.Funcao,
+                    Volutario = item.Volutario,
+                    StatusAtirador = item.StatusAtirador, // False informa que ele não foi desligado do TG
+                    
+                    // Dados de Pontuação
+                    PontosJustificados = item.PontosJustificados,
+                    PontosNaoJustificados = item.PontosNaoJustificados,
+                    TotalPontos = pontosTotais,
+
+                    // Dados de Horas/Tempo de Serviço
+                    HorasCfc = item.HorasCfc,
+                    HorasInstrucao = item.HorasInstrucao,
+                    HorasExtras = item.HorasExtras,
+                    HorasServico = item.HorasServico,
+                    TotalHoras = horasTotais,
+                    TotalDias = horasTotais / 8,
+                };
+
+                atiradores.Add(at);
+            }
+            
+            return atiradores.OrderBy(a => a.NumeroAtirador).ToList();
         }
 
         public Atirador ObterPorId(string id)
@@ -135,15 +243,15 @@ namespace back_sistema_tg.DAL.DAO
                 // Dados de Pontuação
                 PontosJustificados = novoAtirador.PontosJustificados,
                 PontosNaoJustificados = novoAtirador.PontosNaoJustificados,
-                TotalPontos = novoAtirador.TotalPontos,
+                // TotalPontos = novoAtirador.TotalPontos,
 
                 // Dados de Horas/Tempo de Serviço
                 HorasCfc = novoAtirador.HorasCfc,
                 HorasInstrucao = novoAtirador.HorasInstrucao,
                 HorasExtras = novoAtirador.HorasExtras,
                 HorasServico = novoAtirador.HorasServico,
-                TotalHoras = novoAtirador.TotalHoras,
-                TotalDias = novoAtirador.TotalDias,
+                // TotalHoras = novoAtirador.TotalHoras,
+                // TotalDias = novoAtirador.TotalDias,
             };
 
             _context.CollectionAtirador.ReplaceOne(u => u.IdAtirador == id, atirador);
@@ -152,6 +260,60 @@ namespace back_sistema_tg.DAL.DAO
         public void Excluir(string id)
         {
             _context.CollectionAtirador.DeleteOne(atirador => atirador.IdAtirador == id);
+        }
+
+        public void Presenca(string [] atiradoresPresentes)
+        {
+            foreach (var item in atiradoresPresentes)
+            {
+                var atirador = _context.CollectionAtirador.Find<Atirador>(a => a.CR == item).FirstOrDefault();
+
+                var horas = atirador.HorasInstrucao + 4;
+
+                _context.CollectionAtirador.UpdateOne(at =>
+                    at.IdAtirador == atirador.IdAtirador,
+                    Builders<Atirador>.Update.Set(ati => ati.HorasInstrucao, horas),
+                    new UpdateOptions { IsUpsert = false }
+                );
+
+                horas = 0;
+            }
+        }
+
+        public void Falta(string [] atiradoresFaltosos)
+        {
+            foreach (var item in atiradoresFaltosos)
+            {
+                var atirador = _context.CollectionAtirador.Find<Atirador>(a => a.CR == item).FirstOrDefault();
+
+                var pontos = atirador.PontosNaoJustificados + 4;
+
+                _context.CollectionAtirador.UpdateOne(at =>
+                    at.IdAtirador == atirador.IdAtirador,
+                    Builders<Atirador>.Update.Set(ati => ati.PontosNaoJustificados, pontos),
+                    new UpdateOptions { IsUpsert = false }
+                );
+
+                pontos = 0;
+            }
+        }
+
+        public void Justificados(string [] atiradoresJustificados)
+        {
+            foreach (var item in atiradoresJustificados)
+            {
+                var atirador = _context.CollectionAtirador.Find<Atirador>(a => a.CR == item).FirstOrDefault();
+
+                var pontos = atirador.PontosJustificados + 2;
+
+                _context.CollectionAtirador.UpdateOne(at =>
+                    at.IdAtirador == atirador.IdAtirador,
+                    Builders<Atirador>.Update.Set(ati => ati.PontosJustificados, pontos),
+                    new UpdateOptions { IsUpsert = false }
+                );
+
+                pontos = 0;
+            }
         }
     }
 }

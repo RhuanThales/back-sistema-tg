@@ -21,7 +21,7 @@ namespace back_sistema_tg.BLL
             _atiradorDAO.Inserir(atirador);
         }
 
-        public List<Atirador> ObterTodos()
+        public List<AtiradorDTO> ObterTodos()
         {
             var listaAtirador = _atiradorDAO.ObterTodos();
 
@@ -63,7 +63,7 @@ namespace back_sistema_tg.BLL
             
         }
 
-         public List<Atirador> ObterDesligados(){
+         public List<AtiradorDTO> ObterDesligados(){
             try
             {
                 var desligados = _atiradorDAO.ObterDesligados();
