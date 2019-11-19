@@ -280,6 +280,21 @@ namespace back_sistema_tg.DAL.DAO
             }
         }
 
+        public void PresencaEscala(string atiradorPresente, int peso)
+        {
+            var atirador = _context.CollectionAtirador.Find<Atirador>(a => a.CR == atiradorPresente).FirstOrDefault();
+
+            var horas = atirador.HorasServico + peso;
+
+            _context.CollectionAtirador.UpdateOne(at =>
+                at.IdAtirador == atirador.IdAtirador,
+                Builders<Atirador>.Update.Set(ati => ati.HorasServico, horas),
+                new UpdateOptions { IsUpsert = false }
+            );
+
+             horas = 0;
+        }
+
         public void Falta(string [] atiradoresFaltosos)
         {
             foreach (var item in atiradoresFaltosos)
@@ -298,6 +313,21 @@ namespace back_sistema_tg.DAL.DAO
             }
         }
 
+        public void FaltaEscala(string atiradorFaltoso, int peso)
+        {
+            var atirador = _context.CollectionAtirador.Find<Atirador>(a => a.CR == atiradorFaltoso).FirstOrDefault();
+
+            var pontos = atirador.PontosNaoJustificados + peso;
+
+            _context.CollectionAtirador.UpdateOne(at =>
+                at.IdAtirador == atirador.IdAtirador,
+                Builders<Atirador>.Update.Set(ati => ati.PontosNaoJustificados, pontos),
+                new UpdateOptions { IsUpsert = false }
+            );
+
+            pontos = 0;
+        }
+
         public void Justificados(string [] atiradoresJustificados)
         {
             foreach (var item in atiradoresJustificados)
@@ -314,6 +344,21 @@ namespace back_sistema_tg.DAL.DAO
 
                 pontos = 0;
             }
+        }
+
+        public void JustificadosEscala(string atiradorJustificado, int peso)
+        {
+            var atirador = _context.CollectionAtirador.Find<Atirador>(a => a.CR == atiradorJustificado).FirstOrDefault();
+
+            var pontos = atirador.PontosJustificados + peso;
+
+            _context.CollectionAtirador.UpdateOne(at =>
+                at.IdAtirador == atirador.IdAtirador,
+                Builders<Atirador>.Update.Set(ati => ati.PontosJustificados, pontos),
+                new UpdateOptions { IsUpsert = false }
+            );
+
+            pontos = 0;
         }
     }
 }

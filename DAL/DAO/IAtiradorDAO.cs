@@ -23,7 +23,10 @@ namespace back_sistema_tg.DAL.DAO
         void Excluir(string id);
         // Métodos de Cálculo
         void Presenca(string [] atiradoresPresentes);
+        void PresencaEscala(string atiradorPresente, int peso);
         void Falta(string [] atiradoresFaltosos);
+        void FaltaEscala(string atiradorFaltoso, int peso);
         void Justificados(string [] atiradoresJustificados);
+        void JustificadosEscala(string atiradorJustificado, int peso);
     }
 }

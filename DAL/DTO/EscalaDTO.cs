@@ -8,6 +8,7 @@ namespace back_sistema_tg.DAL.DTO
     {
         public string IdEscala { get; set; }
         public int NumeroEscala { get; set; }
+        public bool StatusEscala { get; set; }
         public string InstrutorSemana { get; set; }
         public Diaria Segunda { get; set; }
         public Diaria Terca { get; set; }

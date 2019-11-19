@@ -12,10 +12,12 @@ namespace back_sistema_tg.DAL.DAO
         void Inserir(Escala escala);
         // Read
         List<Escala> ObterTodos();
-        Escala ObterPorId(string id);
+        Escala ObterPorId(string idEscala);
         // Update
-        void Atualizar(string id, Escala novoEscala);
+        void Atualizar(string idEscala, Escala novoEscala);
         // Delete
-        void Excluir(string id);
+        void Excluir(string idEscala);
+        // Métodos de calculo
+        void ChamadaDiariaEscala(string idEscala, string diaEscala);
     }
 }

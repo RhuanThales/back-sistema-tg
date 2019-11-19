@@ -10,11 +10,13 @@ namespace back_sistema_tg.DAL.DAO
     public class EscalaDAO : IEscalaDAO
     {
         // Injeção de Dependências
+        public readonly IAtiradorDAO _atiradorDAO;
         private readonly IMongoContext _context;
 
         // Método Construtor da classe
-        public EscalaDAO(IMongoContext context)
+        public EscalaDAO(IAtiradorDAO atiradorDAO, IMongoContext context)
         {
+            _atiradorDAO = atiradorDAO;
             _context = context;
         }
         
@@ -28,6 +30,7 @@ namespace back_sistema_tg.DAL.DAO
             
             Escala novoEscala = new Escala{
                 NumeroEscala = num,
+                StatusEscala = false,
                 InstrutorSemana = escala.InstrutorSemana,
                 Segunda = escala.Segunda,
                 Terca = escala.Terca,
@@ -59,6 +62,7 @@ namespace back_sistema_tg.DAL.DAO
             Escala escala = new Escala{
                 IdEscala = id,
                 NumeroEscala = novaEscala.NumeroEscala,
+                StatusEscala = false,
                 InstrutorSemana = novaEscala.InstrutorSemana,
                 Segunda = novaEscala.Segunda,
                 Terca = novaEscala.Terca,
@@ -75,6 +79,55 @@ namespace back_sistema_tg.DAL.DAO
         public void Excluir(string id)
         {
             _context.CollectionEscala.DeleteOne(escala => escala.IdEscala == id);
+        }
+
+        public void ChamadaDiariaEscala(string idEscala, string diaEscala)
+        {
+            var escala = _context.CollectionEscala.Find<Escala>(u => u.IdEscala == idEscala).FirstOrDefault();
+            
+            Diaria infoDiariaEscala = obterDiaEscala(idEscala, diaEscala);
+
+            //infoDiariaEscala.ComandanteGuarda
+
+            foreach (var item in infoDiariaEscala.PermanenciaManha)
+            {
+                
+            }
+            foreach (var item in infoDiariaEscala.PermanenciaTarde)
+            {
+                
+            }
+            foreach (var item in infoDiariaEscala.Guardas)
+            {
+                
+            }
+        }
+
+        public Diaria obterDiaEscala(string idEscala, string diaEscala)
+        {
+            var escala = _context.CollectionEscala.Find<Escala>(u => u.IdEscala == idEscala).FirstOrDefault();
+
+            if(escala.Segunda.DiaEscala == diaEscala){
+                return escala.Segunda;
+            }
+            else if(escala.Terca.DiaEscala == diaEscala){
+                return escala.Terca;
+            }
+            else if(escala.Quarta.DiaEscala == diaEscala){
+                return escala.Quarta;
+            }
+            else if(escala.Quinta.DiaEscala == diaEscala){
+                return escala.Quinta;
+            }
+            else if(escala.Sexta.DiaEscala == diaEscala){
+                return escala.Sexta;
+            }
+            else if(escala.Sabado.DiaEscala == diaEscala){
+                return escala.Sabado;
+            }
+            else {
+                return escala.Domingo;
+            }
         }
     }
 }

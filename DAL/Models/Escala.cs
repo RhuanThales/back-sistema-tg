@@ -12,6 +12,9 @@ namespace back_sistema_tg.DAL.Models
         [BsonElement("NumeroEscala")]
         public int NumeroEscala { get; set; }
         
+        [BsonElement("StatusEscala")]
+        public bool StatusEscala { get; set; }
+        
         [BsonElement("InstrutorSemana")]
         public string InstrutorSemana { get; set; }
 
