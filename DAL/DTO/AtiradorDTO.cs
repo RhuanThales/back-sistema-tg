@@ -9,7 +9,7 @@ namespace back_sistema_tg.DAL.DTO
 
         // Dados Pessoais
         public string NomeAtirador { get; set; }
-        public DateTime DataNascimento { get; set; }
+        public string DataNascimento { get; set; }
         public string CPF { get; set; }
         public RegistroGeral RegistroGeral { get; set; }
         public TituloEleitor TituloEleitor { get; set; }

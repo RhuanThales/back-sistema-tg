@@ -18,5 +18,7 @@ namespace back_sistema_tg.BLL
         void Atualizar(string id, Atirador novoAtirador);
         // Delete
         void Excluir(string id);
+        //
+        bool VerificarDadosAtiradores(string crAtirador);
     }
 }

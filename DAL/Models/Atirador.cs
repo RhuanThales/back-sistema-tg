@@ -15,7 +15,7 @@ namespace back_sistema_tg.DAL.Models
         public string NomeAtirador { get; set; }
 
         [BsonElement("DataNascimento")]
-        public DateTime DataNascimento { get; set; }
+        public string DataNascimento { get; set; }
         
         [BsonElement("CPF")]
         public string CPF { get; set; }

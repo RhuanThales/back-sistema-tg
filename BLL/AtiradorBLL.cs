@@ -116,5 +116,10 @@ namespace back_sistema_tg.BLL
                 throw new IntegrityException("Não foi possível efetuar a remoção.");
             }
         }
+
+        public bool VerificarDadosAtiradores(string crAtirador)
+        {
+            return _atiradorDAO.VerificarDadosAtiradores(crAtirador);
+        }
     }
 }

@@ -360,5 +360,20 @@ namespace back_sistema_tg.DAL.DAO
 
             pontos = 0;
         }
+
+        public bool VerificarDadosAtiradores(string crAtirador)
+        {
+            var listaAtiradores = _context.CollectionAtirador.Find(atirador => true).ToList();
+            
+            foreach(var item in listaAtiradores)
+            {
+                if(crAtirador == item.CR)
+                {
+                    return true;
+                }
+            }
+            
+            return false;
+        }
     }
 }
