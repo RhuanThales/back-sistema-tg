@@ -27,6 +27,6 @@ namespace back_sistema_tg.DAL.DAO
         void Falta(string [] atiradoresFaltosos);
         void FaltaEscala(string atiradorFaltoso, int peso);
         void Justificados(string [] atiradoresJustificados);
-        void JustificadosEscala(string atiradorJustificado, int peso);
+        void JustificadoEscala(string atiradorJustificado, int peso);
     }
 }

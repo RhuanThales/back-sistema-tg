@@ -292,7 +292,7 @@ namespace back_sistema_tg.DAL.DAO
                 new UpdateOptions { IsUpsert = false }
             );
 
-             horas = 0;
+            horas = 0;
         }
 
         public void Falta(string [] atiradoresFaltosos)
@@ -346,7 +346,7 @@ namespace back_sistema_tg.DAL.DAO
             }
         }
 
-        public void JustificadosEscala(string atiradorJustificado, int peso)
+        public void JustificadoEscala(string atiradorJustificado, int peso)
         {
             var atirador = _context.CollectionAtirador.Find<Atirador>(a => a.CR == atiradorJustificado).FirstOrDefault();
 

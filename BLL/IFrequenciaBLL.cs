@@ -10,6 +10,7 @@ namespace back_sistema_tg.BLL
         void Inserir(Frequencia frequencia);
         // Read
         List<Frequencia> ObterTodos();
+        List<Frequencia> ObterFrequenciasPorAtirador(string crAtirador);
         Frequencia ObterPorId(string id);
         // Update
         void Atualizar(string id, Frequencia novaFrequencia);

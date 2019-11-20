@@ -28,7 +28,7 @@ namespace back_sistema_tg.DAL.DAO
 
             var num = convert + 1;
             
-            Escala novoEscala = new Escala{
+            Escala novoEscala = new Escala {
                 NumeroEscala = num,
                 StatusEscala = false,
                 InstrutorSemana = escala.InstrutorSemana,
@@ -84,50 +84,8 @@ namespace back_sistema_tg.DAL.DAO
         public void ChamadaDiariaEscala(string idEscala, string diaEscala)
         {
             var escala = _context.CollectionEscala.Find<Escala>(u => u.IdEscala == idEscala).FirstOrDefault();
-            
-            Diaria infoDiariaEscala = obterDiaEscala(idEscala, diaEscala);
 
-            //infoDiariaEscala.ComandanteGuarda
 
-            foreach (var item in infoDiariaEscala.PermanenciaManha)
-            {
-                
-            }
-            foreach (var item in infoDiariaEscala.PermanenciaTarde)
-            {
-                
-            }
-            foreach (var item in infoDiariaEscala.Guardas)
-            {
-                
-            }
-        }
-
-        public Diaria obterDiaEscala(string idEscala, string diaEscala)
-        {
-            var escala = _context.CollectionEscala.Find<Escala>(u => u.IdEscala == idEscala).FirstOrDefault();
-
-            if(escala.Segunda.DiaEscala == diaEscala){
-                return escala.Segunda;
-            }
-            else if(escala.Terca.DiaEscala == diaEscala){
-                return escala.Terca;
-            }
-            else if(escala.Quarta.DiaEscala == diaEscala){
-                return escala.Quarta;
-            }
-            else if(escala.Quinta.DiaEscala == diaEscala){
-                return escala.Quinta;
-            }
-            else if(escala.Sexta.DiaEscala == diaEscala){
-                return escala.Sexta;
-            }
-            else if(escala.Sabado.DiaEscala == diaEscala){
-                return escala.Sabado;
-            }
-            else {
-                return escala.Domingo;
-            }
         }
     }
 }

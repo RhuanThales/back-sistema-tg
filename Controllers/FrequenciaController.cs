@@ -59,6 +59,26 @@ namespace back_sistema_tg.Controllers
             return Ok(new ApiOkResponse(listaFrequencia));
         }
 
+        [HttpGet("ObterFrequenciasPorAtirador/{crAtirador}")]
+        public ActionResult<List<FrequenciaDTO>> ObterFrequenciasPorAtirador(string crAtirador)
+        {
+            var model = _frequenciaBll.ObterFrequenciasPorAtirador(crAtirador);
+
+            if (model == null)
+            {
+                return NotFound(new ApiResponse(404, "Frequencias não encontradas para esse Atirador."));
+            }
+
+            List<FrequenciaDTO> listaFrequencia = new List<FrequenciaDTO>();
+
+            foreach (var item in model)
+            {
+                listaFrequencia.Add(_mapper.Map<FrequenciaDTO>(item));
+            }
+
+            return Ok(new ApiOkResponse(listaFrequencia));
+        }
+
         [HttpGet("ObterPorId/{IdFrequencial}")]
         public ActionResult<FrequenciaDTO> ObterPorId(string IdFrequencia)
         {

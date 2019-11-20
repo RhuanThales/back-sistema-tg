@@ -11,12 +11,14 @@ namespace back_sistema_tg.DAL.DAO
     {
         // Injeção de Dependências
         public readonly IAtiradorDAO _atiradorDAO;
+        public readonly IFrequenciaDAO _frequenciaDAO;
         private readonly IMongoContext _context;
 
         // Método Construtor da classe
-        public ChamadaDAO(IAtiradorDAO atiradorDAO, IMongoContext context)
+        public ChamadaDAO(IAtiradorDAO atiradorDAO, IFrequenciaDAO frequenciaDAO, IMongoContext context)
         {
             _atiradorDAO = atiradorDAO;
+            _frequenciaDAO = frequenciaDAO;
             _context = context;
         }
         
@@ -78,6 +80,21 @@ namespace back_sistema_tg.DAL.DAO
             _atiradorDAO.Presenca(chamada.AtiradoresPresentes);
             _atiradorDAO.Falta(chamada.AtiradoresFaltosos);
             _atiradorDAO.Justificados(chamada.AtiradoresJustificados);
+
+            foreach (var item in chamada.AtiradoresPresentes)
+            {
+                _frequenciaDAO.InserirFrequencia(chamada.DataChamada, "Presença em Instrução", item, 2, 0, "Presente");
+            }
+
+            foreach (var item in chamada.AtiradoresFaltosos)
+            {
+                _frequenciaDAO.InserirFrequencia(chamada.DataChamada, "Presença em Instrução", item, 0, 4, "Não Presente");
+            }
+
+            foreach (var item in chamada.AtiradoresJustificados)
+            {
+                _frequenciaDAO.InserirFrequencia(chamada.DataChamada, "Presença em Instrução", item, 0, 2, "Não Presente - Justificado");
+            }
 
             _context.CollectionChamada.UpdateOne(ch =>
                 ch.IdChamada == chamada.IdChamada,

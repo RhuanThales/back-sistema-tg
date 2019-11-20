@@ -10,8 +10,10 @@ namespace back_sistema_tg.DAL.DAO
     {
         // Create
         void Inserir(Frequencia frequencia);
+        void InserirFrequencia(string data, string tipo, string crAtirador, int horas, int pontos, string presenca);
         // Read
         List<Frequencia> ObterTodos();
+        List<Frequencia> ObterFrequenciasPorAtirador(string crAtirador);
         Frequencia ObterPorId(string id);
         // Update
         void Atualizar(string id, Frequencia novaFrequencia);

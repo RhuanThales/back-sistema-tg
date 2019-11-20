@@ -25,7 +25,10 @@ namespace back_sistema_tg.DAL.Models
         [BsonElement("PesoHoras")]
         public int PesoHoras { get; set; }
 
+        [BsonElement("PesoPontos")]
+        public int PesoPontos { get; set; }
+
         [BsonElement("Presenca")]
-        public bool Presenca { get; set; }
+        public string Presenca { get; set; }
     }
 }

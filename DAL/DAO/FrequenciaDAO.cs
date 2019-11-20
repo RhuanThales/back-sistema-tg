@@ -15,7 +15,6 @@ namespace back_sistema_tg.DAL.DAO
         {
             _context = context;
         }
-
         
         public void Inserir(Frequencia frequencia)
         {
@@ -25,7 +24,25 @@ namespace back_sistema_tg.DAL.DAO
                 NomeAtirador = frequencia.NomeAtirador,
                 CRAtirador = frequencia.CRAtirador,
                 PesoHoras = frequencia.PesoHoras,
+                PesoPontos = frequencia.PesoPontos,
                 Presenca = frequencia.Presenca
+            };
+
+            _context.CollectionFrequencia.InsertOne(novaFrequencia);
+        }
+
+        public void InserirFrequencia(string data, string tipo, string crAtirador, int horas, int pontos, string presenca)
+        {
+            var atirador = _context.CollectionAtirador.Find<Atirador>(a => a.CR == crAtirador).FirstOrDefault();
+            
+            Frequencia novaFrequencia = new Frequencia{
+                Data = data,
+                Tipo = tipo,
+                NomeAtirador = atirador.NomeAtirador,
+                CRAtirador = crAtirador,
+                PesoHoras = horas,
+                PesoPontos = pontos,
+                Presenca = presenca
             };
 
             _context.CollectionFrequencia.InsertOne(novaFrequencia);
@@ -34,6 +51,13 @@ namespace back_sistema_tg.DAL.DAO
         public List<Frequencia> ObterTodos()
         {
             var colecaoFrequencia = _context.CollectionFrequencia.Find(frequencia => true).ToList();
+
+            return colecaoFrequencia;
+        }
+
+        public List<Frequencia> ObterFrequenciasPorAtirador(string crAtirador)
+        {
+            var colecaoFrequencia = _context.CollectionFrequencia.Find(frequencia => frequencia.CRAtirador == crAtirador).ToList();
 
             return colecaoFrequencia;
         }

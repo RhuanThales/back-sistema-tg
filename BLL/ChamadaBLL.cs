@@ -34,6 +34,7 @@ namespace back_sistema_tg.BLL
 
             return chamada;
         }
+        
         public void Atualizar(string id, Chamada novaChamada)
         {
             bool hasAny = (_chamadaDAO.ObterPorId(id))!=null;

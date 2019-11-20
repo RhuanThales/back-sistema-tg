@@ -8,8 +8,9 @@ namespace back_sistema_tg.DAL.DTO
         public string Data { get; set; }
         public string Tipo { get; set; }
         public string NomeAtirador { get; set; }
-        public string RAAtirador { get; set; }
+        public string CRAtirador { get; set; }
         public int PesoHoras { get; set; }
-        public bool Presenca { get; set; }
+        public int PesoPontos { get; set; }
+        public string Presenca { get; set; }
     }
 }

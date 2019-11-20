@@ -29,6 +29,13 @@ namespace back_sistema_tg.BLL
             return listaFrequencia;
         }
 
+        public List<Frequencia> ObterFrequenciasPorAtirador(string crAtirador)
+        {
+            var listaFrequencia = _frequenciaDAO.ObterFrequenciasPorAtirador(crAtirador);
+
+            return listaFrequencia;
+        }
+
         public Frequencia ObterPorId(string id)
         {
             var frequencia = _frequenciaDAO.ObterPorId(id);

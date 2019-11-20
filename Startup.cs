@@ -133,6 +133,9 @@ namespace back_sistema_tg
             services.AddScoped<IChamadaDAO, ChamadaDAO>();
             services.AddScoped<IChamadaBll, ChamadaBll>();
 
+            services.AddScoped<IChamadaEscalaDAO, ChamadaEscalaDAO>();
+            services.AddScoped<IChamadaEscalaBll, ChamadaEscalaBll>();
+
             services.AddScoped<SeedingService>();
         }
 
