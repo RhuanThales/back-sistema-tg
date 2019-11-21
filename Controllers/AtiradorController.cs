@@ -200,37 +200,37 @@ namespace back_sistema_tg.Controllers
                 var nomeAtirador  = item.GetValue(0).ToString().ToLower();
                 nomeAtirador  = cultureinfo.TextInfo.ToTitleCase(nomeAtirador);
 
-                var naturalidade  = item.GetValue(0).ToString().ToLower();
+                var naturalidade  = item.GetValue(7).ToString().ToLower();
                 naturalidade  = cultureinfo.TextInfo.ToTitleCase(naturalidade);
 
-                var crAtirador  = item.GetValue(0).ToString().ToLower();
+                var crAtirador  = item.GetValue(21).ToString().ToLower();
                 crAtirador  = cultureinfo.TextInfo.ToTitleCase(crAtirador);
 
-                var naturalidadeCR  = item.GetValue(0).ToString().ToLower();
+                var naturalidadeCR  = item.GetValue(22).ToString().ToLower();
                 naturalidadeCR  = cultureinfo.TextInfo.ToTitleCase(naturalidadeCR);
 
-                var nomeGuerra  = item.GetValue(0).ToString().ToLower();
+                var nomeGuerra  = item.GetValue(23).ToString().ToLower();
                 nomeGuerra  = cultureinfo.TextInfo.ToTitleCase(nomeGuerra);
 
-                var numAtirador  = item.GetValue(0).ToString();
+                var numAtirador  = item.GetValue(24).ToString();
                 var numeroAtirador  = Convert.ToInt32(numAtirador);
 
-                var numPelotao  = item.GetValue(0).ToString();
+                var numPelotao  = item.GetValue(25).ToString();
                 var numeroPelotao  = Convert.ToInt32(numPelotao);
 
-                var funcao  = item.GetValue(0).ToString().ToLower();
+                var funcao  = item.GetValue(26).ToString().ToLower();
                 funcao  = cultureinfo.TextInfo.ToTitleCase(funcao);
 
-                var nomePai  = item.GetValue(0).ToString().ToLower();
+                var nomePai  = item.GetValue(9).ToString().ToLower();
                 nomePai  = cultureinfo.TextInfo.ToTitleCase(nomePai);
 
-                var nomeMae  = item.GetValue(0).ToString().ToLower();
+                var nomeMae  = item.GetValue(8).ToString().ToLower();
                 nomeMae  = cultureinfo.TextInfo.ToTitleCase(nomeMae);
 
-                var religiao  = item.GetValue(0).ToString().ToLower();
+                var religiao  = item.GetValue(10).ToString().ToLower();
                 religiao  = cultureinfo.TextInfo.ToTitleCase(religiao);
 
-                var escolaridade  = item.GetValue(0).ToString().ToLower();
+                var escolaridade  = item.GetValue(11).ToString().ToLower();
                 escolaridade  = cultureinfo.TextInfo.ToTitleCase(escolaridade);
 
                 RegistroGeral reg = new RegistroGeral();
@@ -240,28 +240,28 @@ namespace back_sistema_tg.Controllers
                 if(_atiradorBll.VerificarDadosAtiradores(crAtirador) != true)
                 {     
                     // Setando os valores para o registro geral
-                    reg.OrgaoEmissor = item.GetValue(0).ToString().ToLower();
-                    reg.NumeroRg = item.GetValue(0).ToString().ToLower();
+                    reg.OrgaoEmissor = item.GetValue(3).ToString().ToLower();
+                    reg.NumeroRg = item.GetValue(4).ToString().ToLower();
 
                     // Setando os valores para o titulo de eleitor
-                    titEleitor.ZonaTitulo = item.GetValue(0).ToString().ToLower();
-                    titEleitor.NumeroTitulo = item.GetValue(0).ToString().ToLower();
+                    titEleitor.ZonaTitulo = item.GetValue(5).ToString().ToLower();
+                    titEleitor.NumeroTitulo = item.GetValue(6).ToString().ToLower();
 
                     // Setando os valores para o endereco
-                    end.Logradouro = item.GetValue(0).ToString().ToLower();
-                    end.Bairro = item.GetValue(0).ToString().ToLower();
-                    var numEndereco = item.GetValue(0).ToString();
+                    end.Logradouro = item.GetValue(12).ToString().ToLower();
+                    end.Bairro = item.GetValue(13).ToString().ToLower();
+                    var numEndereco = item.GetValue(14).ToString();
                     end.NumeroEndereco = Convert.ToInt32(numEndereco);
-                    end.CEP = item.GetValue(0).ToString().ToLower();
-                    end.Cidade = item.GetValue(0).ToString().ToLower();
-                    end.Estado = item.GetValue(0).ToString().ToLower();
+                    end.CEP = item.GetValue(15).ToString().ToLower();
+                    end.Cidade = item.GetValue(16).ToString().ToLower();
+                    end.Estado = item.GetValue(17).ToString().ToLower();
                     
                     // Setenado os valores para o Atirador
                     Atirador atirador = new Atirador()
                     {
                         NomeAtirador = nomeAtirador,
-                        DataNascimento = item.GetValue(0).ToString().ToLower(),
-                        CPF = item.GetValue(0).ToString().ToLower(),
+                        DataNascimento = item.GetValue(1).ToString().ToLower(),
+                        CPF = item.GetValue(2).ToString().ToLower(),
                         RegistroGeral = reg,
                         TituloEleitor = titEleitor,
                         Naturalidade = naturalidade,
@@ -272,9 +272,9 @@ namespace back_sistema_tg.Controllers
 
                         // Dados de Endereço/Contato
                         Endereco = end,
-                        Telefone = item.GetValue(0).ToString().ToLower(),
-                        TelefonePai = item.GetValue(0).ToString().ToLower(),
-                        TelefoneMae = item.GetValue(0).ToString().ToLower(),
+                        Telefone = item.GetValue(18).ToString().ToLower(),
+                        TelefonePai = item.GetValue(19).ToString().ToLower(),
+                        TelefoneMae = item.GetValue(20).ToString().ToLower(),
 
                         // Dados do Tiro de Guerra
                         CR = crAtirador,
@@ -283,6 +283,8 @@ namespace back_sistema_tg.Controllers
                         NumeroAtirador = numeroAtirador,
                         NumeroPelotao = numeroPelotao,
                         Funcao = funcao,
+                        // Volutario = item.GetValue(27).ToString(),
+                        // StatusAtirador = item.GetValue(28).ToString(),
                         Volutario = false,
                         StatusAtirador = false,
                 
