@@ -166,7 +166,7 @@ namespace back_sistema_tg.Controllers
                     {
                         using (var csvReader = new ChoCSVReader(reader).WithFirstLineHeader())
                         {
-                            csvReader.WithDelimiter(";");
+                            csvReader.WithDelimiter(",");
 
                             foreach (var item in csvReader)
                             {
